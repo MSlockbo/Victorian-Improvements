@@ -1,0 +1,3 @@
+﻿l_english:
+ begin_integration_tt: "Begins integration of $TARGET_COUNTRY$"
+ integration_in_progress_tt: "Integration of another country already in progress."

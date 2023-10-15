@@ -1,0 +1,29 @@
+﻿
+break_truce = {
+	requires_approval = no
+	show_confirmation_box = yes
+
+	potential = {
+		is_player = yes
+
+		scope:target_country = {
+			has_truce_with = root
+		}
+	}
+
+	possible = {
+		is_player = yes
+	}
+
+	accept_effect = {
+		end_truce = {
+			country = scope:target_country
+			months = 0
+		}
+
+		create_incident = {
+			country = scope:target_country
+			value = 40
+		}
+	}
+}
