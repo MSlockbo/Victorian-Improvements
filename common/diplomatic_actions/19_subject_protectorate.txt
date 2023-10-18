@@ -212,7 +212,8 @@
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION_NEGATIVE"
 					value = "scope:actor.ai_ideological_opinion(root)"
-					min = -30
+					multiply = 0.75
+					min = -20
 				}					
 			}			
 
