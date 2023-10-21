@@ -31,7 +31,7 @@ decrease_autonomy_protectorate = {
 	}
 
 	accept_effect = {
-		create_truce = { country = scope:target_country months = 12 }
+		create_truce = { country = scope:target_country months = 60 }
 
 		hidden_effect = {
 			remove_diplomatic_pact = {
@@ -78,7 +78,7 @@ decrease_autonomy_tributary = {
 	}
 
 	accept_effect = {
-		create_truce = { country = scope:target_country months = 12 }
+		create_truce = { country = scope:target_country months = 60 }
 
 		hidden_effect = {
 			remove_diplomatic_pact = {
@@ -125,7 +125,7 @@ decrease_autonomy_dominion = {
 	}
 
 	accept_effect = {
-		create_truce = { country = scope:target_country months = 12 }
+		create_truce = { country = scope:target_country months = 60 }
 
 		hidden_effect = {
 			remove_diplomatic_pact = {

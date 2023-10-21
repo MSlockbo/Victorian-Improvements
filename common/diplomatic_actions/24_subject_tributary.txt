@@ -63,6 +63,10 @@
 			country = scope:target_country
 			value = 5
 		}
+		create_truce = {
+			country = scope:target_country
+			months = 60
+		}
 	}
 	
 	ai = {
@@ -176,6 +180,7 @@
 			if = {
 				limit = { 
 					has_strategy = ai_strategy_armed_isolationism 
+					"relations(scope:actor)" < relations_threshold:friendly
 				}
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_ISOLATIONIST"
@@ -191,7 +196,7 @@
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_ARMY_STRENGTH"
 					value = "scope:actor.ai_army_comparison(root)"
-					max = 25
+					max = 30
 				}				
 			}
 			else = {
