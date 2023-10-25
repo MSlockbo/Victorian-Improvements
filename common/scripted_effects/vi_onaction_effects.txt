@@ -1,0 +1,23 @@
+
+onaction_birthrate_modifier = {
+
+	set_local_variable = {
+		name = birthrate_multiplier
+		value = {
+			value = average_sol
+			subtract = 10
+		}
+	}
+
+	clamp_local_variable = {
+		name = birthrate_multiplier
+		min = 0
+		max = 50
+	}
+
+	remove_modifier = birthrate_modifier
+	add_modifier = {
+		name = birthrate_modifier
+		multiplier = local_var:birthrate_multiplier
+	}
+}

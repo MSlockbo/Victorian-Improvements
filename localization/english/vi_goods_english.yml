@@ -1,0 +1,6 @@
+﻿l_english:
+ pop_education:0 "Education" 
+ modifier_goods_output_pop_education_add:0 "@pop_education! output per level"
+ modifier_goods_output_pop_education_add_desc:0 "The amount of @pop_education! produced by buildings"
+ modifier_goods_input_pop_education_add:0 "@pop_education! input per level"
+ modifier_goods_input_pop_education_add_desc:0 "The amount of @pop_education! consumed by buildings"

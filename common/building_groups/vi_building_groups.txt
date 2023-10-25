@@ -1,0 +1,9 @@
+
+
+bg_uranium_mining = {
+	parent_group = bg_mining
+	
+	default_building = building_uranium_mine
+
+	can_use_slaves = yes
+}
