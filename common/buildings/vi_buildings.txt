@@ -1,0 +1,106 @@
+﻿
+
+#building_school = {
+#	building_group = bg_bureaucracy
+#	texture = "gfx/interface/icons/building_icons/building_university.dds"
+#	levels_per_mesh = 5
+#
+#	city_type = city
+#	
+#	unlocking_technologies = { 
+#		rationalism
+#	}
+#
+#	production_method_groups = {
+#		pmg_education
+#		pmg_school_administrations
+#	}
+#	
+#	required_construction = construction_cost_medium
+#
+#	possible = {
+#		error_check = {
+#			severity = fail
+#			this = {
+#				owner = { 
+#					NOT = { has_law = law_type:law_no_schools } 
+#				}
+#			}
+#		}
+#	}
+#}
+
+building_uranium_mine = {
+	building_group = bg_uranium_mining
+	texture = "gfx/interface/icons/building_icons/coal_mine.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_high
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		uranium_mining
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_uranium_mine
+		pmg_explosives_building_uranium_mine
+		pmg_steam_automation_building_uranium_mine
+		pmg_train_automation_building_uranium_mine
+		pmg_ownership_capital_building_uranium_mine
+	}
+}
+
+building_pharmaceutical_plant = {
+	building_group = bg_light_industry
+	texture = "gfx/interface/icons/building_icons/pharmaceutical_plant.dds"
+	levels_per_mesh = 5
+	required_construction = construction_cost_high
+
+	city_type = city
+
+	unlocking_technologies = {
+		pharmaceuticals
+	}
+
+	production_method_groups = {
+		pmg_base_building_pharmaceutical_plant
+		pmg_ownership_capital_building_pharmaceutical_plant
+	}
+}
+
+building_theatre = {
+	building_group = bg_theatre
+	texture = "gfx/interface/icons/building_icons/theatre.dds"
+	levels_per_mesh = 10
+	required_construction = construction_cost_high
+
+	city_type = city
+
+	unlocking_technologies = {
+		romanticism
+	}
+
+	production_method_groups = {
+		pmg_base_building_theatre
+		pmg_ownership_building_arts_academy
+	}
+}
+
+building_instrument_manufacturies = {
+	building_group = bg_light_industry
+	texture = "gfx/interface/icons/building_icons/instrument_manufacturies.dds"
+	levels_per_mesh = 5
+	required_construction = construction_cost_high
+
+	city_type = city
+
+	unlocking_technologies = {
+		romanticism
+	}
+
+	production_method_groups = {
+		pmg_base_building_instrument_manufacturies
+		pmg_ownership_capital_building_instrument_manufacturies
+	}
+}
