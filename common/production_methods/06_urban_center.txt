@@ -488,6 +488,34 @@ pm_oil-fired_plant = {
 	}
 }
 
+pm_fission_plant = {
+	texture = "gfx/interface/icons/production_method_icons/hydroelectric_plant.dds"
+
+	unlocking_technologies = {
+		fission_reactor
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 75
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 20
+			goods_input_uranium_add = 50
+			goods_output_electricity_add = 500
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1400
+		}
+	}
+}
+
 pm_publicly_traded_building_power_plant = {
 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
 

@@ -1,15 +1,5 @@
 
 texticon = {
-	icon = pop_education
-	iconsize = {
-		texture = "gfx/interface/icons/goods_icons/paper.dds"
-		size = { 25 25 }
-		offset = { 0 7 }
-		fontsize = 18
-	}
-}
-
-texticon = {
 	icon = uranium
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/coal.dds"
@@ -18,3 +8,43 @@ texticon = {
 		fontsize = 18
 	}
 }
+
+texticon = {
+	icon = pharmaceuticals
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/pharmaceuticals.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = musical_instruments
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/musical_instruments.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = entertainment
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/entertainment.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+#texticon = {
+#	icon = computers
+#	iconsize = {
+#		texture = "gfx/interface/icons/goods_icons/computer.dds"
+#		size = { 25 25 }
+#		offset = { 0 7 }
+#		fontsize = 18
+#	}
+#}

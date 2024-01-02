@@ -1,4 +1,4 @@
-
+﻿
 on_monthly_pulse_state = {
 	effect = {
 		onaction_birthrate_modifier = yes

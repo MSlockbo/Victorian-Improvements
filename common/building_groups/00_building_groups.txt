@@ -702,7 +702,9 @@ bg_navy = {
 }
 
 bg_skyscraper = {
-	parent_group = bg_government
+	parent_group = bg_private_infrastructure
+
+	urbanization = 50
 }
 
 bg_monuments_hidden = {

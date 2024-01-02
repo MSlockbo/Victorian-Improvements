@@ -538,9 +538,9 @@ luxury_furniture = {
 
 gold = {
 	texture = "gfx/interface/icons/goods_icons/gold.dds"
-	cost = 100
+	cost = 2000
 	category = luxury
-	tradeable = no
+	tradeable = yes
 	fixed_price = yes
 	prestige_factor = 5
 }

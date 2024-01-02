@@ -1,40 +1,80 @@
-
-goods_output_pop_education_add = {
+﻿
+goods_output_uranium_add = {
 	good = yes
 	percent = no
 }
 
-goods_output_pop_education_mult = {
-	good = yes
-	percent = yes
-}
-
-goods_input_pop_education_add = {
-	good = no
-	percent = no
-}
-
-goods_input_pop_education_mult = {
-	good = no
-	percent = yes
-}
-
-goods_output_pop_uranium_add = {
-	good = yes
-	percent = no
-}
-
-goods_output_pop_uranium_mult = {
+goods_output_uranium_mult = {
 	good = yes
 	percent = yes
 }
 
-goods_input_pop_uranium_add = {
+goods_input_uranium_add = {
 	good = no
 	percent = no
 }
 
-goods_input_pop_uranium_mult = {
+goods_input_uranium_mult = {
+	good = no
+	percent = yes
+}
+
+goods_output_musical_instruments_add = {
+	good = yes
+	percent = no
+}
+
+goods_output_musical_instruments_mult = {
+	good = yes
+	percent = yes
+}
+
+goods_input_musical_instruments_add = {
+	good = no
+	percent = no
+}
+
+goods_input_musical_instruments_mult = {
+	good = no
+	percent = yes
+}
+
+goods_output_entertainment_add = {
+	good = yes
+	percent = no
+}
+
+goods_output_entertainment_mult = {
+	good = yes
+	percent = yes
+}
+
+goods_input_entertainment_add = {
+	good = no
+	percent = no
+}
+
+goods_input_entertainment_mult = {
+	good = no
+	percent = yes
+}
+
+goods_output_pharmaceuticals_add = {
+	good = yes
+	percent = no
+}
+
+goods_output_pharmaceuticals_mult = {
+	good = yes
+	percent = yes
+}
+
+goods_input_pharmaceuticals_add = {
+	good = no
+	percent = no
+}
+
+goods_input_pharmaceuticals_mult = {
 	good = no
 	percent = yes
 }

@@ -334,6 +334,7 @@ pmg_automobile_production = {
 	production_methods = {
 		pm_automobiles_disabled
 		pm_automobile_production
+		pm_electric_automobile_production
 	}
 }
 

@@ -1,0 +1,9 @@
+construction_investment_recipient = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_construction_add = 20
+}
+
+construction_investment_sender = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_construction_add = -20
+}

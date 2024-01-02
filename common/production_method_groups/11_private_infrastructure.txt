@@ -7,6 +7,7 @@
 		pm_steam_trains
 		pm_electric_trains
 		pm_diesel_trains
+		pm_high_speed_rail
 	}
 }
 

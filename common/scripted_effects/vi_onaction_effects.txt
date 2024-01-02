@@ -1,4 +1,4 @@
-
+﻿
 onaction_birthrate_modifier = {
 
 	set_local_variable = {

@@ -1,24 +1,44 @@
 ﻿
-pop_education = {
-	texture = "gfx/interface/icons/goods_icons/paper.dds"
-
-	cost = 20
-	category = staple
-	local = yes
-	tradeable = no
-
-	prestige_factor = 5
-
-	consumption_tax_cost = 300
-}
-
 uranium = {
 	texture = "gfx/interface/icons/goods_icons/coal.dds"
 
-	cost = 60
+	cost = 80
 	category = industrial
 	
 	prestige_factor = 20
 
 	consumption_tax_cost = 400
+}
+
+musical_instruments = {
+	texture = "gfx/interface/icons/goods_icons/musical_instruments.dds"
+
+	cost = 200
+	category = luxury
+
+	prestige_factor = 10
+
+	consumption_tax_cost = 200
+}
+
+entertainment = {
+	texture = "gfx/interface/icons/goods_icons/entertainment.dds"
+
+	cost = 30
+	category = staple
+	
+	prestige_factor = 20
+
+	consumption_tax_cost = 200
+}
+
+pharmaceuticals = {
+	texture = "gfx/interface/icons/goods_icons/pharmaceuticals.dds"
+
+	cost = 40
+	category = industrial
+	
+	prestige_factor = 5
+
+	consumption_tax_cost = 200
 }

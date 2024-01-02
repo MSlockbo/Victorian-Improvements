@@ -63,3 +63,60 @@ pmg_school_administrations = {
 		pm_secular_administration
 	}
 }
+
+# ====== PHARMACEUTICALS ====== #
+
+pmg_base_building_pharmaceutical_plant = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_pharmaceuticals
+	}
+}
+
+pmg_ownership_capital_building_pharmaceutical_plant = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_building_pharmaceutical_plant
+		pm_publicly_traded_building_pharmaceutical_plant
+		pm_government_run_building_pharmaceutical_plant
+		pm_worker_cooperative_building_pharmaceutical_plant
+	}
+}
+
+# ====== THEATRE ====== #
+
+pmg_base_building_theatre = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_opera
+		pm_broadway
+		pm_cinema
+	}
+}
+
+# ====== INSTRUMENTS ====== #
+
+pmg_base_building_instrument_manufacturies = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_handcrafted_instruments
+		pm_lathe_made_instruments
+		pm_mechanized_instrument_workshops
+	}
+}
+
+pmg_ownership_capital_building_instrument_manufacturies = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_building_instrument_manufacturies
+		pm_government_run_industry
+		pm_worker_cooperative_industry
+	}
+}

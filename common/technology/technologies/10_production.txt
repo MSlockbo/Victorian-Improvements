@@ -1151,3 +1151,19 @@ compression_ignition = {
 		value = 1
 	}
 }
+
+fission_reactor = {
+	# Unlocks Diesel Trains PM in Railways
+	# Unlocks Compression Ignition Tractors PM in Rye Farms, Wheat Farms, Millet Farms
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/oil_turbines.dds"
+	category = production
+	
+	unlocking_technologies = {
+		compression_ignition
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}

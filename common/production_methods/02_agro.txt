@@ -85,7 +85,7 @@ pm_chemical_fertilizer = {
 			building_employment_clergymen_add = 300
 		}
 	}
-}			
+}		
 
 pm_no_secondary = {
 	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
@@ -199,6 +199,25 @@ pm_compression_ignition_tractors = {
 		workforce_scaled = {
 			# input goods								
 			goods_input_oil_add = 3
+			goods_input_engines_add = 2
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -3000
+		}
+	}
+}
+
+pm_electric_tractors = {
+	texture = "gfx/interface/icons/production_method_icons/tractors.dds"
+
+	unlocking_technologies = {
+		compression_ignition
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods								
+			goods_input_electricity_add = 3
 			goods_input_engines_add = 2
 		}
 
