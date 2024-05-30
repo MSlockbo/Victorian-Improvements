@@ -1,0 +1,19 @@
+﻿
+#KOR_vi_soh_jaepil = {
+#	first_name = Seo
+#	last_name = Jaepil
+#	historical = yes
+#	culture = cu:korean
+#	religion = rel:protestant
+#	female = no
+#	interest_group = ig_intelligentsia
+#	ideology = ideology_radical
+#	birth_date = 1864.1.7
+#	dna = dna_vi_jaepil
+#	traits = {
+#		persistent
+#		reckless
+#		innovative
+#	}
+#	trait_generation = { }
+#}

@@ -1,0 +1,45 @@
+﻿
+button_vi_complete_gwangmu_reforms = {
+	name = "button_vi_complete_gwangmu_reforms"
+	desc = "button_vi_complete_gwangmu_reforms_desc"
+
+	visible = { always = yes }
+
+	possible = {
+		OR = { # Freedom of Speech
+			has_law = law_type:law_right_of_assembly
+			has_law = law_type:law_protected_speech
+		}
+		OR = { # Min Constitutional Monarchy
+			has_law = law_type:law_wealth_voting
+			has_law = law_type:law_census_voting
+			has_law = law_type:law_universal_suffrage
+		}
+		NOT = { has_law = law_type:law_traditionalism }         # Non traditionalist economy
+		NOT = { has_law = law_type:law_hereditary_bureaucrats } # No hereditary bureaucrats
+		NOT = { has_law = law_type:law_mercantilism }           # No mercantilism
+		
+		custom_tooltip = {
+			text = vi_not_completed_gwangmu_reforms_tt
+
+			NOT = { has_variable = vi_completed_gwangmu_reforms }
+		}
+	}
+
+	effect = {
+		set_variable = {
+			name = vi_completed_gwangmu_reforms
+			value = yes
+		}
+
+		if = {
+			limit = {
+				is_subject = yes
+			}
+
+			overlord = {
+				trigger_event = vi_KOR_events.2
+			}
+		}
+	}
+}

@@ -1,18 +1,17 @@
 ﻿
 break_truce = {
 	requires_approval = no
+	should_notify_third_parties = yes
 	show_confirmation_box = yes
 
 	potential = {
-		is_player = yes
-
 		scope:target_country = {
 			has_truce_with = root
 		}
 	}
 
 	possible = {
-		is_player = yes
+		aggressive_diplomatic_plays_permitted = yes
 	}
 
 	accept_effect = {
@@ -24,6 +23,32 @@ break_truce = {
 		create_incident = {
 			country = scope:target_country
 			value = 40
+		}
+	}
+
+	ai = {
+		propose_score = {
+			value = 100
+		}
+
+		will_propose = {
+			scope:target_country.relations:root < relations_threshold:cordial
+
+			AND = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = domineering
+				}
+
+				infamy < infamy_threshold:infamous
+
+				scope:target_country = {
+					OR = {
+						country_rank <= rank_value:unrecognized_major_power
+						infamy > infamy_threshold:pariah
+					}
+				}
+			}
 		}
 	}
 }
