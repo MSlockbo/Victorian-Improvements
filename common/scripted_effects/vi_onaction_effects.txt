@@ -1,5 +1,5 @@
 ﻿
-onaction_birthrate_modifier = {
+onaction_vi_modifier_birthrate = {
 
 	set_local_variable = {
 		name = birthrate_multiplier
@@ -15,9 +15,30 @@ onaction_birthrate_modifier = {
 		max = 50
 	}
 
-	remove_modifier = birthrate_modifier
+	remove_modifier = modifier_vi_birthrate
 	add_modifier = {
-		name = birthrate_modifier
+		name = modifier_vi_birthrate
 		multiplier = local_var:birthrate_multiplier
+	}
+}
+
+onaction_vi_modifier_native_resistance = {
+	if = {
+		limit = {
+			NOT = { has_modifier = modifier_vi_native_resistance }
+			is_under_colonization = yes
+			OR = {
+				region = sr:region_dixie
+				region = sr:region_great_plains
+				region = sr:region_new_england
+				region = sr:region_the_midwest
+				region = sr:region_pacific_coast
+				region = sr:region_canada
+			}
+		}
+
+		add_modifier = {
+			name = modifier_vi_native_resistance
+		}
 	}
 }

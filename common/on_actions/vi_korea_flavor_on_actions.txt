@@ -1,0 +1,7 @@
+﻿
+on_monthly_pulse_country = {
+	random_events = {
+		90 = 0
+		10 = vi_KOR_events.1
+	}
+}

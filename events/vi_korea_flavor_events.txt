@@ -1,0 +1,255 @@
+﻿
+namespace = vi_KOR_events
+
+vi_KOR_events.1 = { # Gapsin Coup
+	type = country_event
+	placement = root
+
+	title = vi_KOR_events.1.t
+	desc = vi_KOR_events.1.d
+	flavor = vi_KOR_events.1.f
+
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = c:KOR
+		this = c:KOR
+		has_journal_entry = je_vi_korea_gwangmu_reform
+		game_date >= 1882.1.1
+		OR = { # Primarily advocated for democracy
+			has_law = law_type:law_monarchy
+			has_law = law_type:law_theocracy
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_oligarchy
+		}
+	}
+
+	option = { # Exile Seo Jai-Pil
+		name = vi_KOR_events.1.a
+		default_option = yes
+
+		if = {
+			limit = {
+				exists = c:JAP
+			}
+
+			c:JAP ?= { # Jai-Pil moved to Japan after being exiled by Korea
+				create_character = {
+					first_name = Seo
+					last_name = Jaepil
+					historical = yes
+					is_agitator = yes
+					interest_group = ig:ig_intelligentsia
+					birth_date = 1864.1.7
+					female = no
+					dna = dna_vi_jaepil
+					culture = cu:korean
+					religion = rel:mahayana
+					ideology = ideology_radical
+					traits = {
+						persistent
+						reckless
+						innovative
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:USA
+			}
+
+			c:USA ?= {
+				create_character = {
+					first_name = Seo
+					last_name = Jaepil
+					historical = yes
+					is_agitator = yes
+					interest_group = ig:ig_intelligentsia
+					birth_date = 1864.1.7
+					female = no
+					dna = dna_vi_jaepil
+					culture = cu:korean
+					religion = rel:protestant # Jai-Pil converted to protestantism upon moving to the USA
+					ideology = ideology_radical
+					traits = {
+						persistent
+						reckless
+						innovative
+					}
+				}
+			}
+		}
+		else = { # Get sent to limbo if Japan or USA do not exist
+			create_character = {
+				first_name = Seo
+				last_name = Jaepil
+				historical = yes
+				is_agitator = yes
+				interest_group = ig:ig_intelligentsia
+				birth_date = 1864.1.7
+				female = no
+				dna = dna_vi_jaepil
+				culture = cu:korean
+				religion = rel:protestant
+				ideology = ideology_radical
+				traits = {
+					persistent
+					reckless
+					innovative
+				}
+
+				on_created = {
+					exile_character = yes
+				}
+			}
+		}
+
+		add_radicals = {
+			value = 0.5
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+
+	option = { # Pardon Seo Jai-Pil
+		name = vi_KOR_events.1.b
+
+		create_character = {
+			first_name = Seo
+			last_name = Jaepil
+			historical = yes
+			is_agitator = yes
+			interest_group = ig:ig_intelligentsia
+			birth_date = 1864.1.7
+			female = no
+			dna = dna_vi_jaepil
+			culture = cu:korean
+			religion = rel:mahayana
+			ideology = ideology_radical
+			traits = {
+				persistent
+				reckless
+				innovative
+			}
+		}
+
+		add_radicals = {
+			value = 0.25
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+
+	option = { # Promote Seo Jai-Pil
+		name = vi_KOR_events.1.c
+		
+		create_character = {
+			first_name = Seo
+			last_name = Jaepil
+			historical = yes
+			ig_leader = yes
+			interest_group = ig:ig_intelligentsia
+			birth_date = 1864.1.7
+			female = no
+			dna = dna_vi_jaepil
+			culture = cu:korean
+			religion = rel:mahayana
+			ideology = ideology_radical
+			traits = {
+				persistent
+				reckless
+				innovative
+			}
+		}
+
+		add_loyalists = {
+			value = 0.1
+			interest_group = ig:ig_intelligentsia
+		}
+
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = modifier_vi_promoted_jaepil
+				months = normal_modifier_time
+			}
+			custom_tooltip = vi_indie_club_tt
+			hidden_effect = {
+				set_interest_group_name = ig_indie_club
+			}
+		}
+	}
+}
+
+vi_KOR_events.2 = { # Korean Independence
+	type = country_event
+	placement = root
+
+	title = vi_KOR_events.2.t
+	desc = vi_KOR_events.2.d
+	flavor = vi_KOR_events.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	option = { # Grant Independence
+		name = vi_KOR_events.2.a
+		c:KOR = {
+			make_independent = yes
+		}
+		create_diplomatic_pact = {
+			country = c:KOR
+			type = alliance
+		}
+		create_diplomatic_pact = {
+			country = c:KOR
+			type = customs_union
+		}
+
+		default_option = yes
+	}
+
+	option = { # Start Independence War
+		name = vi_KOR_events.2.b
+
+		trigger = {
+			NOT = { has_truce_with = c:KOR } # Does not have truce with Korea
+			OR = {
+				c:KOR = {
+					relations:root < relations_threshold:cordial # Relations are less than cordial
+				}
+				has_attitude = { # Or has domineering attitude towards Korea
+					who = c:KOR
+					attitude = domineering
+				}
+				has_attitude = { # Or has belligerent attitude towards Korea
+					who = c:KOR
+					attitude = belligerent
+				}
+			}
+		}
+
+		c:KOR = {
+			create_diplomatic_play = {
+				name = vi_korean_independence_war
+				escalation = 0
+				war = yes
+				target_country = root
+				type = dp_independence
+			}
+		}
+	}
+}
