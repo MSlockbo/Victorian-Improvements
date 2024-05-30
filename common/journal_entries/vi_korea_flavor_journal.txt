@@ -1,0 +1,25 @@
+﻿
+je_vi_korea_gwangmu_reform = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	group = je_group_internal_affairs
+
+	scripted_button = button_vi_complete_gwangmu_reforms
+
+	complete = {
+		custom_tooltip = {
+			text = vi_completed_gwangmu_reforms_tt
+
+			has_variable = vi_completed_gwangmu_reforms
+		}
+		is_subject = no
+	}
+
+	on_complete = {
+		set_variable = korean_empire_taken
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

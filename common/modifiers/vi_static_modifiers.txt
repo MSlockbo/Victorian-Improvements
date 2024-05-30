@@ -1,6 +1,1 @@
 ﻿
-modifier_subject_integration_cost = {
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	country_bureaucracy_add = -1000
-}

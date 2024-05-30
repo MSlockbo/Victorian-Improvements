@@ -1,0 +1,7 @@
+﻿l_english:
+  break_truce: "Break Truce"
+  break_truce_desc: "#header $break_truce$#!\n$TOOLTIP_DELIMITER$\nAn [concept_instant_diplomatic_action] that breaks an ongoing truce with the target country and creates a [concept_diplomatic_incident] in $STRATEGIC_REGION$, giving #N #B #tooltippable #tooltip:$INFAMY_BREAKDOWN_TAG$ $INFAMY_AMOUNT|1$#!#!#!#! [concept_infamy] to [COUNTRY.GetName] and reducing their $RELATIONS$ with #tooltippable #tooltip:$RELATIONS_BREAKDOWN_TAG$ $NUM_COUNTRIES_IMPACTED|v$ countries#!#!"
+  break_truce_action_name: "Break Truce"
+  break_truce_action_propose_name: "Break Truce"
+  break_truce_action_notification_name: "Truce Broken"
+  break_truce_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has broken our truce, resulting in a [concept_diplomatic_incident] in $STRATEGIC_REGION$"

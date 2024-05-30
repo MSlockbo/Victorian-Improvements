@@ -117,6 +117,7 @@ building_skyscraper = {
 			}
 		}
 	}
+	
 	can_build_private = {
 		error_check = {
 			severity = potential
