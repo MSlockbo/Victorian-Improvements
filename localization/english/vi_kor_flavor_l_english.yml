@@ -1,0 +1,28 @@
+﻿l_english:
+  je_vi_korea_gwangmu_reform: "Gwangmu Reforms"
+  je_vi_korea_gwangmu_reform_reason: "Korea, alongside China and Japan, has lagged behind in technology. Certain movements in Korea seek to modernize and westernize Korea both economically and politically."
+  button_vi_complete_gwangmu_reforms: "Complete the Reforms"
+  button_vi_complete_gwangmu_reforms_desc: ""
+  vi_completed_gwangmu_reforms_tt: "[SCOPE.GetRootScope.GetCountry.GetName] has completed the $je_vi_korea_gwangmu_reform$."
+  vi_not_completed_gwangmu_reforms_tt: "[SCOPE.GetRootScope.GetCountry.GetName] has #b not#! completed the $je_vi_korea_gwangmu_reform$."
+
+  vi_KOR_events.1.t: "Gapsin Coup"
+  vi_KOR_events.1.d: "A group of reactionaries, led by Seo Jai-Pil, has attempted a coup to overthrow the Monarchy."
+  vi_KOR_events.1.f: "TODO"
+  vi_KOR_events.1.a: "Exile these insurgents!"
+  vi_KOR_events.1.b: "Pardon them, we shan't risk riling up the public."
+  vi_KOR_events.1.c: "They have some points we could benefit from."
+
+  vi_KOR_events.2.t: "Korean Independence"
+  vi_KOR_events.2.d: "Korea has undergone a series of political and economic reforms and now seeks independence."
+  vi_KOR_events.2.f: "TODO"
+  vi_KOR_events.2.a: "Grant them their independence."
+  vi_KOR_events.2.b: "Make them fight for it."
+
+  modifier_vi_promoted_jaepil: "Promoted Jai-Pil"
+
+  ig_indie_club: "Independence Club"
+  ig_indie_club_desc: "An interest group and political movement, started by Seo Jai-Pil, to move Korea towards independence and democratization."
+  vi_indie_club_tt: "Intelligentsia will be named Independence Club"
+
+  Jaepil: "Jae-Pil"

@@ -1,0 +1,12 @@
+﻿
+on_monthly_pulse_state = {
+	effect = {
+		onaction_vi_modifier_birthrate = yes
+	}
+}
+
+on_colony_created = {
+	effect = {
+		onaction_vi_modifier_native_resistance = yes
+	}
+}
