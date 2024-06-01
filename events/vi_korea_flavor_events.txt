@@ -32,7 +32,7 @@ vi_KOR_events.1 = { # Gapsin Coup
 		}
 	}
 
-	option = { # Exile Seo Jai-Pil
+	option = { # Exile Seo Jae-Pil
 		name = vi_KOR_events.1.a
 		default_option = yes
 
@@ -41,7 +41,7 @@ vi_KOR_events.1 = { # Gapsin Coup
 				exists = c:JAP
 			}
 
-			c:JAP ?= { # Jai-Pil moved to Japan after being exiled by Korea
+			c:JAP ?= { # Jae-Pil moved to Japan after being exiled by Korea
 				create_character = {
 					first_name = Seo
 					last_name = Jaepil
@@ -78,7 +78,7 @@ vi_KOR_events.1 = { # Gapsin Coup
 					female = no
 					dna = dna_vi_jaepil
 					culture = cu:korean
-					religion = rel:protestant # Jai-Pil converted to protestantism upon moving to the USA
+					religion = rel:protestant # Jae-Pil converted to protestantism upon moving to the USA
 					ideology = ideology_radical
 					traits = {
 						persistent
@@ -119,7 +119,7 @@ vi_KOR_events.1 = { # Gapsin Coup
 		}
 	}
 
-	option = { # Pardon Seo Jai-Pil
+	option = { # Pardon Seo Jae-Pil
 		name = vi_KOR_events.1.b
 
 		create_character = {
@@ -147,7 +147,7 @@ vi_KOR_events.1 = { # Gapsin Coup
 		}
 	}
 
-	option = { # Promote Seo Jai-Pil
+	option = { # Promote Seo Jae-Pil
 		name = vi_KOR_events.1.c
 		
 		create_character = {

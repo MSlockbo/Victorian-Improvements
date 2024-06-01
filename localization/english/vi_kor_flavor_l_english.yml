@@ -2,7 +2,7 @@
   je_vi_korea_gwangmu_reform: "Gwangmu Reforms"
   je_vi_korea_gwangmu_reform_reason: "Korea, alongside China and Japan, has lagged behind in technology. Certain movements in Korea seek to modernize and westernize Korea both economically and politically."
   button_vi_complete_gwangmu_reforms: "Complete the Reforms"
-  button_vi_complete_gwangmu_reforms_desc: ""
+  button_vi_complete_gwangmu_reforms_desc: "Complete the Gwangmu Reforms and Declare the Korean Empire"
   vi_completed_gwangmu_reforms_tt: "[SCOPE.GetRootScope.GetCountry.GetName] has completed the $je_vi_korea_gwangmu_reform$."
   vi_not_completed_gwangmu_reforms_tt: "[SCOPE.GetRootScope.GetCountry.GetName] has #b not#! completed the $je_vi_korea_gwangmu_reform$."
 
