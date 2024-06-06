@@ -1,0 +1,70 @@
+﻿
+POL = {
+	dynamic_country_name = {
+		name = vi_dyn_congress_of_poland
+		adjective = POL_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			scope:actor = {
+				exists = c:RUS
+				c:RUS = {
+					has_diplomatic_pact = {
+						who = c:POL
+						type = personal_union
+						is_initiator = yes
+					}
+				}
+			
+				OR = {
+					has_law = law_type:law_landed_voting
+					has_law = law_type:law_wealth_voting
+					has_law = law_type:law_census_voting
+					has_law = law_type:law_universal_suffrage
+				}
+			}
+		}
+	}
+}
+
+XIN = {
+	dynamic_country_name = {
+		name = vi_dyn_xinjiang
+		adjective = XIN_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			scope:actor = {
+				exists = c:CHI
+				is_subject = yes
+				scope:overlord = {
+					this = c:CHI
+				}
+			}
+		}
+	}
+}
+
+MGL = {
+	dynamic_country_name = {
+		name = vi_dyn_outer_mongolia
+		adjective = vi_dyn_outer_mongolia_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			scope:actor = {
+				exists = c:CHI
+				is_subject = yes
+				scope:overlord = {
+					this = c:CHI
+				}
+			}
+		}
+	}
+}

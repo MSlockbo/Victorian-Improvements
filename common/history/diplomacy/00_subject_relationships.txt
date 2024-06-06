@@ -31,6 +31,10 @@
 			type = personal_union
 		}
 		create_diplomatic_pact = {
+			country = c:POL
+			type = personal_union
+		}
+		create_diplomatic_pact = {
 			country = c:KZH
 			type = puppet
 		}
@@ -40,6 +44,18 @@
 		}
 		create_diplomatic_pact = {
 			country = c:OZH
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:LIV
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:COU
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:EST
 			type = puppet
 		}
 	}
@@ -71,7 +87,27 @@
 		create_diplomatic_pact = {
 			country = c:LAN
 			type = tributary
-		}			
+		}	
+		create_diplomatic_pact = {
+			country = c:XIN
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:MGL
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:IMG
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:QIN
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:MCH
+			type = vassal
+		}
 	}
 	c:AUS ?= {
 		create_diplomatic_pact = {

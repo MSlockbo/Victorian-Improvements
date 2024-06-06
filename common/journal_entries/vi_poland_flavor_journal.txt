@@ -1,0 +1,24 @@
+﻿
+je_vi_congress_of_poland = {
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = je_group_internal_affairs
+
+	immediate = {
+		set_variable = var_vi_congress_poland_pu
+		remove_primary_culture = cu:polish
+		add_primary_culture = cu:russian
+	}
+
+	complete = {
+		is_subject = no
+	}
+
+	on_complete = {
+		add_primary_culture = cu:polish
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

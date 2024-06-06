@@ -1,0 +1,101 @@
+﻿
+button_vi_support_polish_independence = {
+	name = "Support Polish Independence"
+	desc = ""
+
+	visible = {
+		c:POL != this
+		NOT = { has_variable = var_vi_support_polish_independence }
+	}
+
+	possible = {
+		exists = c:POL
+		c:POL = {
+			is_subject = yes
+		}
+	}
+
+	effect = {
+		set_variable = var_vi_support_polish_independence
+		c:POL = {
+			scope:overlord = {
+				change_relations = {
+					country = root
+					value = -50
+				}
+			}
+
+			change_relations = {
+				country = root
+				value = 30
+			}
+		}
+	}
+}
+
+button_vi_retract_support_polish_independence = {
+	name = "Retract Support for Polish Independence"
+	desc = ""
+
+	visible = {
+		c:POL != this
+		has_variable = var_vi_support_polish_independence
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		remove_variable = var_vi_support_polish_independence
+		c:POL = {
+			change_relations = {
+				country = root
+				value = -30
+			}
+		}
+	}
+}
+
+button_vi_unify_with_poland = {
+	name = "Unify with Poland"
+	desc = ""
+
+	visible = {
+		OR = {
+			AND = {
+				exists = c:POL
+				c:POL != this
+				c:POL = {
+					is_subject = no
+				}
+			}
+			AND = {		
+				exists = PLC
+				c:PLC != this
+				c:PLC = {
+					is_subject = no
+				}
+			}
+		}
+	}
+
+	possible = {
+		is_subject = no
+	}
+
+	effect = {
+		if = {
+			limit = { exists = c:POL }
+
+			if = {
+				limit = { is_player = yes }
+				play_as = c:POL
+			}
+
+			c:POL = {
+				annex = root
+			}
+		}
+	}
+}

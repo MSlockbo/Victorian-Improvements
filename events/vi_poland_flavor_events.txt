@@ -1,0 +1,100 @@
+﻿
+namespace = vi_POL_events
+
+vi_POL_events.1 = { # Abolish Monarchy
+	type = country_event
+	placement = root
+
+	title = vi_POL_events.1.t
+	desc = vi_POL_events.1.d
+	flavor = vi_POL_events.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	immediate = {
+		remove_variable = var_vi_congress_poland_pu
+
+		scope:overlord = {
+			create_diplomatic_pact = {
+				country = root
+				type = puppet
+			}
+		}
+	}
+
+	option = { # Appease Overlord
+		name = vi_POL_events.1.a
+		
+		scope:overlord = {
+			change_relations = {
+				country = root
+				value = -10
+			}
+		}
+	}
+
+	option = { # Self-Governance
+		name = vi_POL_events.1.b
+
+		add_primary_culture = cu:polish
+		
+		scope:overlord = {
+			change_relations = {
+				country = root
+				value = -25
+			}
+		}
+	}
+
+	option = { # Poland for Poles
+		name = vi_POL_events.1.c
+
+		trigger = {
+			country_has_primary_culture = cu:russian
+		}
+
+		remove_primary_culture = cu:russian
+		add_primary_culture = cu:polish
+
+		scope:overlord = {
+			if = {
+				limit = {
+					exists = c:RUS
+					this = c:RUS
+				}
+
+				change_relations = {
+					country = root
+					value = -50
+				}
+			}
+			else = {
+				change_relations = {
+					country = root
+					value = -25
+				}
+
+				if = {
+					limit = {
+						exists = c:RUS
+					}
+
+					c:RUS = {
+						change_relations = {
+							country = root
+							value = -50
+						}
+					}
+				}
+			}
+		}
+	}
+}

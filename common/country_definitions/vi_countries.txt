@@ -1,0 +1,44 @@
+﻿
+IMG = {
+	color = { 255  224  124 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { manchu han }
+	capital = STATE_HINGGAN
+}
+
+QIN = {
+	color = { 240 135 0 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { mongol tibetan }
+	capital = STATE_QINGHAI
+}
+
+COU = {
+	color = { 110 29 66 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { latvian }
+	capital = STATE_LATVIA
+}
+
+LIV = {
+	color = { 124 85 201 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { latvian estonian }
+	capital = STATE_LATVIA
+}
