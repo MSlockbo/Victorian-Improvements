@@ -1,7 +1,7 @@
 ﻿
 namespace = vi_POL_events
 
-vi_POL_events.1 = { # Abolish Monarchy
+vi_POL_events.1 = { # Culture event
 	type = country_event
 	placement = root
 
@@ -22,7 +22,7 @@ vi_POL_events.1 = { # Abolish Monarchy
 	immediate = {
 		remove_variable = var_vi_congress_poland_pu
 
-		scope:overlord = {
+		overlord = {
 			create_diplomatic_pact = {
 				country = root
 				type = puppet
@@ -32,13 +32,6 @@ vi_POL_events.1 = { # Abolish Monarchy
 
 	option = { # Appease Overlord
 		name = vi_POL_events.1.a
-		
-		scope:overlord = {
-			change_relations = {
-				country = root
-				value = -10
-			}
-		}
 	}
 
 	option = { # Self-Governance
@@ -46,7 +39,7 @@ vi_POL_events.1 = { # Abolish Monarchy
 
 		add_primary_culture = cu:polish
 		
-		scope:overlord = {
+		overlord = {
 			change_relations = {
 				country = root
 				value = -25
@@ -64,7 +57,7 @@ vi_POL_events.1 = { # Abolish Monarchy
 		remove_primary_culture = cu:russian
 		add_primary_culture = cu:polish
 
-		scope:overlord = {
+		overlord = {
 			if = {
 				limit = {
 					exists = c:RUS
@@ -94,6 +87,41 @@ vi_POL_events.1 = { # Abolish Monarchy
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+vi_POL_events.2 = { # Polish Unification
+	type = country_event
+	placement = root
+
+	title = vi_POL_events.2.t
+	desc = vi_POL_events.2.d
+	flavor = vi_POL_events.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	option = {
+		name = vi_POL_events.2.a
+
+		every_country = {
+			limit = {
+				has_variable = var_vi_polish_unification_target
+			}
+
+			save_temporary_scope_as = polish_unification_target
+
+			root = {
+				annex = scope:polish_unification_target
 			}
 		}
 	}

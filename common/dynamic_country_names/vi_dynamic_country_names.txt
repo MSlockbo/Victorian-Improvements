@@ -8,7 +8,8 @@ POL = {
 		priority = 10
 
 		trigger = {
-			scope:actor = {
+			exists = scope:actor
+			scope:actor ?= {
 				exists = c:RUS
 				c:RUS = {
 					has_diplomatic_pact = {
@@ -38,7 +39,8 @@ XIN = {
 		priority = 10
 
 		trigger = {
-			scope:actor = {
+			exists = scope:actor
+			scope:actor ?= {
 				exists = c:CHI
 				is_subject = yes
 				scope:overlord = {
@@ -52,18 +54,83 @@ XIN = {
 MGL = {
 	dynamic_country_name = {
 		name = vi_dyn_outer_mongolia
-		adjective = vi_dyn_outer_mongolia_adj
+		adjective = MGL_ADJ
 
 		is_main_tag_only = yes
 		priority = 10
 
 		trigger = {
-			scope:actor = {
+			exists = scope:actor
+			scope:actor ?= {
 				exists = c:CHI
 				is_subject = yes
 				scope:overlord = {
 					this = c:CHI
 				}
+			}
+		}
+	}
+}
+
+KOR = {
+	dynamic_country_name = {
+		name = vi_dyn_republic_of_korea
+		adjective = KOR_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = vi_dyn_democratic_peoples_republic_of_korea
+		adjective = KOR_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+GER = {
+	dynamic_country_name = {
+		name = vi_dyn_german_democratic_republic
+		adjective = GER_ADJ
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+RUS = {
+	name = vi_dyn_russian_federation
+	adjective = RUS_ADJ
+
+	is_main_tag_only = yes
+	priority = 10
+
+	trigger = {
+		exists = scope:actor
+		scope:actor ?= {
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
 			}
 		}
 	}

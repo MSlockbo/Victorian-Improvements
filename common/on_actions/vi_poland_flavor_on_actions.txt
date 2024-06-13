@@ -1,10 +1,11 @@
 ﻿
-on_law_activated = {
+on_acquired_technology = {
 	effect = {
 		if = {
-			limit = {
-				has_variable = var_vi_congress_poland_pu
-				NOT = { has_law = law_type:law_monarchy }
+			limit = { 
+				has_technology_researched = nationalism
+				this = c:POL
+				NOT = { country_has_primary_culture = cu:polish }
 			}
 
 			trigger_event = vi_POL_events.1
@@ -12,39 +13,14 @@ on_law_activated = {
 	}
 }
 
-on_diplomatic_play_started = {
+on_wargoal_added = {
 	effect = {
-		if = {
-			limit = {
-				OR = {
-					initiator_is = c:POL
-					target_is = c:POL
-				}
-				has_play_goal = independence
-			}
+		onaction_vi_polish_independence = yes
+	}
+}
 
-			every_country = {
-				limit = { has_variable = var_vi_support_polish_independence }
-
-				save_scope_as = polish_backer
-
-				root = {
-					if = {
-						limit = {
-							initiator_is = c:POL
-						}
-
-						add_initiator_backers = {
-							scope:polish_backer
-						}
-					}
-					else = {
-						add_target_backers = {
-							scope:polish_backer
-						}
-					}
-				}
-			}
-		}
+on_diplo_play_start = {
+	effect = {
+		onaction_vi_polish_independence = yes
 	}
 }

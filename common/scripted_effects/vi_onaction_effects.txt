@@ -42,3 +42,89 @@ onaction_vi_modifier_native_resistance = {
 		}
 	}
 }
+
+onaction_vi_polish_independence = {
+	if = {
+		limit = {
+			NOT = { has_variable = var_vi_polish_supporters_joined }
+		}
+
+		if = { # Check if target and added independence
+			limit = {
+				target = {
+					country_has_primary_culture = cu:polish
+					is_subject_of = root.initiator
+				}
+				has_play_goal = independence
+			}
+			
+			set_variable = var_vi_polish_independence_target_is_target
+			target = { save_temporary_scope_as = polish_independence_target }
+		}
+		else_if = { # Check if initiated independence
+			limit = { 
+				initiator = {
+					country_has_primary_culture = cu:polish
+					is_subject_of = root.target
+				}
+				has_play_goal = independence
+			}
+
+			set_variable = var_vi_polish_independence_target_is_inititator
+			initiator = { save_temporary_scope_as = polish_independence_target }
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_variable = var_vi_polish_independence_target_is_target
+					has_variable = var_vi_polish_independence_target_is_inititator
+				}
+			}
+
+			set_variable = var_vi_polish_supporters_joined
+
+			every_country = { # Every country supporting polish independence that isn't a target or initiator of the play
+				limit = {
+					has_variable = var_vi_support_polish_independence
+					NOR = {
+						this = root.target
+						this = root.initiator
+					}
+				}
+
+				save_temporary_scope_as = polish_backer
+
+				root = {
+					if = { # If independence target is play target
+						limit = {
+							has_variable = var_vi_polish_independence_target_is_target
+						}
+
+						add_target_backers = {
+							scope:polish_backer
+						}
+					}
+					else = { # If independence target is play initiator
+						add_initiator_backers = {
+							scope:polish_backer
+						}
+					}
+
+					if = {
+						limit = {
+							scope:polish_backer = {
+								is_subject_of = scope:polish_independence_target.overlord
+							}
+						}
+
+						add_war_goal = {
+							holder = scope:polish_backer
+							type = independence
+						}
+					}
+				}
+			}
+		}
+	}
+}
