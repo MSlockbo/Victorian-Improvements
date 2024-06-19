@@ -19,7 +19,5 @@
 		
 		set_government_wage_level = high
 		set_tax_level = low
-
-		remove_primary_culture = cu:
 	}
 }

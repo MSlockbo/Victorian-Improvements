@@ -51,6 +51,7 @@ button_vi_retract_support_polish_independence = {
 		every_country = {
 			limit = {
 				country_has_primary_culture = cu:polish
+				NOT = { this = root }
 			}
 			change_relations = {
 				country = root

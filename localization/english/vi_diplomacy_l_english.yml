@@ -4,4 +4,6 @@
   break_truce_action_name: "Break Truce"
   break_truce_action_propose_name: "Break Truce"
   break_truce_action_notification_name: "Truce Broken"
-  break_truce_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has broken our truce, resulting in a [concept_diplomatic_incident] in $STRATEGIC_REGION$"
+  break_truce_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has broken our truce, resulting in a [concept_diplomatic_incident]."
+  break_truce_action_notification_third_party_name: "Truce Broken"
+  break_truce_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has broken their truce with [TARGET_COUNTRY.GetName], resulting in a [concept_diplomatic_incident]."

@@ -119,18 +119,20 @@ GER = {
 }
 
 RUS = {
-	name = vi_dyn_russian_federation
-	adjective = RUS_ADJ
+	dynamic_country_name = {
+		name = vi_dyn_russian_federation
+		adjective = RUS_ADJ
 
-	is_main_tag_only = yes
-	priority = 10
+		is_main_tag_only = yes
+		priority = 10
 
-	trigger = {
-		exists = scope:actor
-		scope:actor ?= {
-			OR = {
-				has_law = law_type:law_presidential_republic
-				has_law = law_type:law_parliamentary_republic
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
 			}
 		}
 	}
