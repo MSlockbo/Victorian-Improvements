@@ -1,0 +1,139 @@
+﻿
+POL = {
+	dynamic_country_name = {
+		name = vi_dyn_congress_of_poland
+		adjective = POL_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				exists = c:RUS
+				c:RUS = {
+					has_diplomatic_pact = {
+						who = c:POL
+						type = personal_union
+						is_initiator = yes
+					}
+				}
+			
+				OR = {
+					has_law = law_type:law_landed_voting
+					has_law = law_type:law_wealth_voting
+					has_law = law_type:law_census_voting
+					has_law = law_type:law_universal_suffrage
+				}
+			}
+		}
+	}
+}
+
+XIN = {
+	dynamic_country_name = {
+		name = vi_dyn_xinjiang
+		adjective = XIN_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				exists = c:CHI
+				is_subject = yes
+				scope:overlord = {
+					this = c:CHI
+				}
+			}
+		}
+	}
+}
+
+MGL = {
+	dynamic_country_name = {
+		name = vi_dyn_outer_mongolia
+		adjective = MGL_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				exists = c:CHI
+				is_subject = yes
+				scope:overlord = {
+					this = c:CHI
+				}
+			}
+		}
+	}
+}
+
+KOR = {
+	dynamic_country_name = {
+		name = vi_dyn_republic_of_korea
+		adjective = KOR_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = vi_dyn_democratic_peoples_republic_of_korea
+		adjective = KOR_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+GER = {
+	dynamic_country_name = {
+		name = vi_dyn_german_democratic_republic
+		adjective = GER_ADJ
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+RUS = {
+	dynamic_country_name = {
+		name = vi_dyn_russian_federation
+		adjective = RUS_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+			}
+		}
+	}
+}

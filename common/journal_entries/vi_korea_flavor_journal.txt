@@ -16,7 +16,7 @@ je_vi_korea_gwangmu_reform = {
 	}
 
 	on_complete = {
-		set_variable = korean_empire_taken
+		set_variable = KOR_korean_empire_declared
 	}
 
 	weight = 100

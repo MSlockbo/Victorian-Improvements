@@ -1,0 +1,154 @@
+﻿
+button_vi_support_polish_independence = {
+	name = "Support Polish Independence"
+	desc = ""
+
+	visible = {
+		NOT = { has_variable = var_vi_support_polish_independence }
+	}
+
+	possible = {
+		any_country = {
+			country_has_primary_culture = cu:polish
+			is_subject = yes
+			this != root
+		}
+	}
+
+	effect = {
+		set_variable = var_vi_support_polish_independence
+		every_country = {
+			limit = {
+				country_has_primary_culture = cu:polish
+			}
+
+			if = {
+				limit = { this != root }
+
+				change_relations = {
+					country = root
+					value = 30
+				}
+			}
+		}
+	}
+}
+
+button_vi_retract_support_polish_independence = {
+	name = "Retract Support for Polish Independence"
+	desc = ""
+
+	visible = {
+		has_variable = var_vi_support_polish_independence
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		remove_variable = var_vi_support_polish_independence
+		every_country = {
+			limit = {
+				country_has_primary_culture = cu:polish
+				NOT = { this = root }
+			}
+			change_relations = {
+				country = root
+				value = -30
+			}
+		}
+	}
+}
+
+button_vi_unify_with_poland = {
+	name = "Unify with Poland"
+	desc = ""
+
+	visible = {
+		OR = {
+			AND = {
+				exists = c:POL
+				c:POL != this
+				c:POL = {
+					is_subject = no
+				}
+			}
+			AND = {		
+				exists = c:PLC
+				c:PLC != this
+				c:PLC = {
+					is_subject = no
+				}
+			}
+		}
+	}
+
+	possible = {
+		is_subject = no
+
+		OR = {
+			AND = {
+				exists = c:PLC
+				has_diplomatic_pact = {
+					who = c:PLC
+					type = customs_union
+				}
+			}
+			AND = {
+				exists = c:POL
+				has_diplomatic_pact = {
+					who = c:POL
+					type = customs_union
+				}
+			}
+		}
+	}
+
+	effect = {
+		set_variable = var_vi_polish_unification_target
+
+		if = {
+			limit = { 
+				exists = c:PLC 
+				has_diplomatic_pact = {
+					who = c:PLC
+					type = customs_union
+				}
+			}
+
+			if = {
+				limit = { 
+					is_player = yes 
+					c:PLC = { is_player = no }
+				}
+				play_as = c:PLC
+			}
+
+			c:PLC = {
+				trigger_event = vi_POL_events.2
+			}
+		}
+		else = {
+			limit = { 
+				exists = c:POL
+				has_diplomatic_pact = {
+					who = c:POL
+					type = customs_union
+				}
+			}
+
+			if = {
+				limit = { 
+					is_player = yes
+					c:POL = { is_player = no }
+				}
+				play_as = c:POL
+			}
+
+			c:POL = {
+				trigger_event = vi_POL_events.2
+			}
+		}
+	}
+}

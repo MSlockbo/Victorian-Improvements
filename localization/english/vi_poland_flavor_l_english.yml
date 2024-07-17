@@ -1,0 +1,15 @@
+﻿l_english:
+  je_vi_congress_of_poland: "Congress of Poland"
+  je_vi_congress_of_poland_reason: "As part of the Congress of Vienna, Poland was given to Russia as an independent polity. Russia has begun to restrict the sovereignty of Poland and risking their ire will have disastrous consequences."
+
+  vi_POL_events.1.t: "Polish Self-Governance"
+  vi_POL_events.1.d: "TODO"
+  vi_POL_events.1.f: "TODO"
+  vi_POL_events.1.a: "Appease [SCOPE.sC('target_country').GetOverlord.GetName]"
+  vi_POL_events.1.b: "Self Governance"
+  vi_POL_events.1.c: "Poland for Poles"
+
+  vi_POL_events.2.t: "Polish Unification"
+  vi_POL_events.2.d: "TODO seeks to unify into one Polish nation."
+  vi_POL_events.2.f: "TODO"
+  vi_POL_events.2.a: "Excellent."

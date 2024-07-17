@@ -1,0 +1,26 @@
+﻿
+on_acquired_technology = {
+	effect = {
+		if = {
+			limit = { 
+				has_technology_researched = nationalism
+				this = c:POL
+				NOT = { country_has_primary_culture = cu:polish }
+			}
+
+			trigger_event = vi_POL_events.1
+		}
+	}
+}
+
+on_wargoal_added = {
+	effect = {
+		onaction_vi_polish_independence = yes
+	}
+}
+
+on_diplo_play_start = {
+	effect = {
+		onaction_vi_polish_independence = yes
+	}
+}
