@@ -1,4 +1,4 @@
-﻿ namespace = russo_chinese
+﻿namespace = russo_chinese
 
 russo_chinese.1 = {
 	type = country_event
@@ -23,17 +23,49 @@ russo_chinese.1 = {
 	}
 
 	immediate = {
+		# find outer manchuria
 		random_state = {
 			limit = {
 				state_region = s:STATE_OUTER_MANCHURIA
 			}
 			save_scope_as = outer_manchuria_scope
 		}
-		c:CHI = {
-			save_scope_as = china_scope
-			create_truce = {
-				country = c:RUS
-				months = normal_modifier_time
+
+		# find china
+		random_country = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:manchu
+					country_has_primary_culture = cu:han
+
+					AND = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								country_has_primary_culture = cu:manchu
+								country_has_primary_culture = cu:han
+							}
+						}
+					}
+				}
+				any_scope_state = {
+					state_region = s:STATE_OUTER_MANCHURIA
+					is_split_state = no
+					is_capital = no
+				}
+				is_country_type = unrecognized
+				is_player = no
+			}
+
+			if = {
+				is_subject = yes
+
+				overlord = {
+					save_scope_as = china_scope
+				}
+			}
+			else = {
+				save_scope_as = china_scope
 			}
 		}
 	}
@@ -43,11 +75,11 @@ russo_chinese.1 = {
 		default_option = yes
 		if = {
 			limit = {
-				c:CHI = {
+				scope:china_scope = {
 					owes_obligation_to = c:RUS
 				}
 			}
-			c:CHI = {
+			scope:china_scope = {
 				set_owes_obligation_to = {
 					country = c:RUS
 					setting = no
@@ -57,6 +89,12 @@ russo_chinese.1 = {
 		random_state = {
 			limit = {
 				state_region = s:STATE_OUTER_MANCHURIA
+				owner = {
+					OR = {
+						this = scope:china_scope
+						overlord = scope:china_scope
+					}
+				}
 			}
 			set_state_owner = c:RUS
  			add_modifier = {
@@ -70,11 +108,11 @@ russo_chinese.1 = {
 		name = russo_chinese.1.b
 		if = {
 			limit = {
-				c:CHI = {
+				scope:china_scope = {
 					owes_obligation_to = c:RUS
 				}
 			}
-			c:CHI = {
+			scope:china_scope = {
 				set_owes_obligation_to = {
 					country = c:RUS
 					setting = no
@@ -84,6 +122,12 @@ russo_chinese.1 = {
 		random_state = {
 			limit = {
 				state_region = s:STATE_OUTER_MANCHURIA
+				owner = {
+					OR = {
+						this = scope:china_scope
+						overlord = scope:china_scope
+					}
+				}
 			}
 			set_state_owner = c:RUS
  			add_modifier = {
@@ -96,7 +140,7 @@ russo_chinese.1 = {
 
 russo_chinese.2 = {
 	type = country_event
-	placement = scope:tomsk_scope
+	placement = scope:ili_scope
 
 	title = russo_chinese.2.t
 	desc = russo_chinese.2.d
@@ -125,7 +169,7 @@ russo_chinese.2 = {
 		}
 		random_state = {
 			limit = {
-				state_region = s:STATE_TOMSK
+				state_region = s:STATE_ALTAI
 			}
 			save_scope_as = tomsk_scope
 		}
@@ -135,11 +179,49 @@ russo_chinese.2 = {
 			}
 			save_scope_as = ili_scope
 		}
-		c:CHI = {
-			save_scope_as = china_scope
-			create_truce = {
-				country = c:RUS
-				months = normal_modifier_time
+		random_country = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:manchu
+					country_has_primary_culture = cu:han
+
+					AND = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								country_has_primary_culture = cu:manchu
+								country_has_primary_culture = cu:han
+							}
+						}
+					}
+				}
+				OR = {
+					any_scope_state = {
+						state_region = s:STATE_ALTAI
+						is_capital = no
+					}
+					any_scope_state = {
+						state_region = s:STATE_JETISY
+						is_capital = no
+					}
+					any_scope_state = {
+						state_region = s:STATE_KIRGHIZIA
+						is_capital = no
+					}
+				}
+				is_country_type = unrecognized
+				is_player = no
+			}
+
+			if = {
+				is_subject = yes
+
+				overlord = {
+					save_scope_as = china_scope
+				}
+			}
+			else = {
+				save_scope_as = china_scope
 			}
 		}
 		random_country = {
@@ -156,11 +238,11 @@ russo_chinese.2 = {
 		default_option = yes
 		if = {
 			limit = {
-				c:CHI = {
+				scope:china_scope = {
 					owes_obligation_to = c:RUS
 				}
 			}
-			c:CHI = {
+			scope:china_scope = {
 				set_owes_obligation_to = {
 					country = c:RUS
 					setting = no
@@ -169,15 +251,11 @@ russo_chinese.2 = {
 		}
 		random_state = {
 			limit = {
-				state_region = s:STATE_TOMSK
-				
+				state_region = s:STATE_ALTAI
 				owner = {
 					OR = {
-						this = c:CHI
-						has_diplomatic_pact = {
-							who = c:CHI
-							type = vassal
-						}
+						this = scope:china_scope
+						overlord = scope:china_scope
 					}
 				}
 			}
@@ -186,14 +264,10 @@ russo_chinese.2 = {
 		random_state = {
 			limit = {
 				state_region = s:STATE_JETISY
-				
 				owner = {
 					OR = {
-						this = c:CHI
-						has_diplomatic_pact = {
-							who = c:CHI
-							type = vassal
-						}
+						this = scope:china_scope
+						overlord = scope:china_scope
 					}
 				}
 			}
@@ -210,11 +284,11 @@ russo_chinese.2 = {
 		}
 		if = {
 			limit = {
-				c:CHI = {
+				scope:china_scope = {
 					owes_obligation_to = c:RUS
 				}
 			}
-			c:CHI = {
+			scope:china_scope = {
 				set_owes_obligation_to = {
 					country = c:RUS
 					setting = no
@@ -223,15 +297,11 @@ russo_chinese.2 = {
 		}
 		random_state = {
 			limit = {
-				state_region = s:STATE_TOMSK
-				
+				state_region = s:STATE_ALTAI
 				owner = {
 					OR = {
-						this = c:CHI
-						has_diplomatic_pact = {
-							who = c:CHI
-							type = vassal
-						}
+						this = scope:china_scope
+						overlord = scope:china_scope
 					}
 				}
 			}
@@ -240,14 +310,10 @@ russo_chinese.2 = {
 		random_state = {
 			limit = {
 				state_region = s:STATE_JETISY
-				
 				owner = {
 					OR = {
-						this = c:CHI
-						has_diplomatic_pact = {
-							who = c:CHI
-							type = vassal
-						}
+						this = scope:china_scope
+						overlord = scope:china_scope
 					}
 				}
 			}
@@ -256,14 +322,10 @@ russo_chinese.2 = {
 		random_state = {
 			limit = {
 				state_region = s:STATE_KIRGHIZIA
-				
 				owner = {
 					OR = {
-						this = c:CHI
-						has_diplomatic_pact = {
-							who = c:CHI
-							type = vassal
-						}
+						this = scope:china_scope
+						overlord = scope:china_scope
 					}
 				}
 			}
@@ -294,15 +356,11 @@ russo_chinese.2 = {
 		}
 		random_state = {
 			limit = {
-				state_region = s:STATE_TOMSK
-				
+				state_region = s:STATE_ALTAI
 				owner = {
 					OR = {
-						this = c:CHI
-						has_diplomatic_pact = {
-							who = c:CHI
-							type = vassal
-						}
+						this = scope:china_scope
+						overlord = scope:china_scope
 					}
 				}
 			}
@@ -311,14 +369,10 @@ russo_chinese.2 = {
 		random_state = {
 			limit = {
 				state_region = s:STATE_JETISY
-				
 				owner = {
 					OR = {
-						this = c:CHI
-						has_diplomatic_pact = {
-							who = c:CHI
-							type = vassal
-						}
+						this = scope:china_scope
+						overlord = scope:china_scope
 					}
 				}
 			}
@@ -332,16 +386,12 @@ russo_chinese.2 = {
 			random_state = {
 				limit = {
 					state_region = s:STATE_KIRGHIZIA
-				
-					owner = {
-						OR = {
-							this = c:CHI
-							has_diplomatic_pact = {
-								who = c:CHI
-								type = vassal
-							}
-						}
+				owner = {
+					OR = {
+						this = scope:china_scope
+						overlord = scope:china_scope
 					}
+				}
 				}
 				set_state_owner = prev
 			}
@@ -422,8 +472,93 @@ russo_chinese.3 = {
  			add_modifier = modifier_vladivostok_civilian
  			add_loyalists = {
  				value = small_radicals
- 				strata = rich
+ 				strata = upper
  			}
+		}
+	}
+}
+
+russo_chinese.4 = {
+	type = country_event
+	placement = scope:amur_scope
+
+	title = russo_chinese.4.t
+	desc = russo_chinese.4.d
+	flavor = russo_chinese.4.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	trigger = {
+		# triggered by JE
+	}
+
+	immediate = {
+		random_state = {
+			limit = {
+				state_region = s:STATE_AMUR
+			}
+			save_scope_as = amur_scope
+		}
+		random_country = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:manchu
+					country_has_primary_culture = cu:han
+
+					AND = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								country_has_primary_culture = cu:manchu
+								country_has_primary_culture = cu:han
+							}
+						}
+					}
+				}
+				any_scope_state = {
+					state_region = s:STATE_AMUR
+					is_split_state = no
+					is_capital = no
+				}
+				is_country_type = unrecognized
+				is_player = no
+			}
+
+			if = {
+				is_subject = yes
+
+				overlord = {
+					save_scope_as = china_scope
+				}
+			}
+			else = {
+				save_scope_as = china_scope
+			}
+		}
+	}
+
+	option = {
+		name = russo_chinese.4.a
+		default_option = yes
+		random_state = {
+			limit = {
+				state_region = s:STATE_AMUR
+				owner = {
+					OR = {
+						this = scope:china_scope
+						overlord = scope:china_scope
+					}
+				}
+			}
+			set_state_owner = c:RUS
 		}
 	}
 }

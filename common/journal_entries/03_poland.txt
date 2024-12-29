@@ -11,8 +11,11 @@
     is_shown_when_inactive = {
         country_has_primary_culture = cu:polish
         NOT = {
-            any_country = {
-                has_variable = var_vi_christ_of_nations
+            sr:region_poland = {
+                any_scope_state = {
+                    count = all
+                    owner = root
+                }
             }
         }
     }

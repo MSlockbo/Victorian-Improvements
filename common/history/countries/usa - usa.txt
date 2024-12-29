@@ -47,6 +47,7 @@
 
 		add_journal_entry = { type = je_texas_usa }
 		add_journal_entry = { type = je_acw_countdown }
+		add_journal_entry = { type = je_seminole_wars }
 		add_journal_entry = { type = je_vi_usa_disorganized_military }
 
 		add_modifier = {
@@ -58,6 +59,6 @@
 		add_company = company_type:company_william_cramp
 		company:company_william_cramp = {
 			set_company_establishment_date = 1830.1.1
-		}
+			set_company_state_region = s:STATE_PENNSYLVANIA		}
 	}
 }

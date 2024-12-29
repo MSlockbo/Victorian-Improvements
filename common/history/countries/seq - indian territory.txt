@@ -1,6 +1,6 @@
 ﻿COUNTRIES = {
 	c:SEQ ?= {
-		effect_starting_technology_tier_3_tech = yes
+		effect_starting_technology_tier_4_tech = yes
 		effect_native_conscription_12 = yes
 		
 		activate_law = law_type:law_presidential_republic # the Indian Territory was, at least, not a monarchy

@@ -120,7 +120,7 @@ GER = {
 
 RUS = {
 	dynamic_country_name = {
-		name = vi_dyn_russian_federation
+		name = vi_dyn_c_russian_federation
 		adjective = RUS_ADJ
 
 		is_main_tag_only = yes
