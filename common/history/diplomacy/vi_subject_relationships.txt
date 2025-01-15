@@ -1,0 +1,8 @@
+﻿DIPLOMACY = {
+	c:SPA ?= {
+		create_diplomatic_pact = {
+			country = c:ADR
+			type = coregency
+		}
+	}
+}

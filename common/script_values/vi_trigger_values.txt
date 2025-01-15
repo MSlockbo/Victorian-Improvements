@@ -1,0 +1,12 @@
+﻿
+prestige_rank = {
+	value = 1
+
+	ordered_country = {
+		limit = {
+			prestige > root.prestige
+		}
+		order_by = prestige
+		add = 1
+	}
+}

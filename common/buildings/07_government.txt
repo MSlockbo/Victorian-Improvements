@@ -135,19 +135,9 @@ building_skyscraper = {
 	required_construction = construction_cost_monument
 
 	can_build_government = {
-		error_check = {
-			severity = fail
-			custom_tooltip = {
-				text = skyscraper_can_construct_tt
-
-				OR = {
-					has_modifier = skyscraper_site
-
-					owner = {
-						has_variable = vi_can_build_skyscrapers
-					}
-				}
-			}
+		custom_tooltip = {
+			text = skyscraper_can_construct_tt
+			has_modifier = skyscraper_site
 		}
 	}
 	can_build_private = {

@@ -20,6 +20,7 @@ lawgroup_governance_principles = {
 			is_subject = yes
 			OR = {
 				is_subject_type = subject_type_personal_union
+				is_subject_type = subject_type_coregency
 				has_government_type = gov_chartered_company
 			}			
 		}
@@ -36,26 +37,7 @@ lawgroup_governance_principles = {
 # 	regressive_movement_chance = 0.25
 # }
 
-law_group_head_of_state = {
-	law_group_category = power_structure
-	base_enactment_days = 150
-	affected_by_regime_change = yes
-
-	progressive_movement_chance = 2.5
-	regressive_movement_chance = 0.25
-	
-	change_allowed_trigger = {
-		NAND = {
-			is_subject = yes
-			OR = {
-				is_subject_type = subject_type_personal_union
-				has_government_type = gov_chartered_company
-			}			
-		}
-	}
-}
-
-law_group_legislative_body = {
+lawgroup_legislative_body = {
 	law_group_category = power_structure
 	base_enactment_days = 150
 	affected_by_regime_change = yes
@@ -64,7 +46,7 @@ law_group_legislative_body = {
 	regressive_movement_chance = 0.25
 }
 
-law_group_political_parties = {
+lawgroup_head_of_state = {
 	law_group_category = power_structure
 	base_enactment_days = 150
 	affected_by_regime_change = yes
@@ -73,20 +55,29 @@ law_group_political_parties = {
 	regressive_movement_chance = 0.25
 }
 
-law_group_elections = {
-	law_group_category = power_structure
-	base_enactment_days = 150
-	affected_by_regime_change = yes
-
-	progressive_movement_chance = 2.5
-	regressive_movement_chance = 0.25
-}
-
-lawgroup_church_and_state = {
+lawgroup_centralization = {
 	law_group_category = power_structure
 	affected_by_regime_change = yes
 	
-	progressive_movement_chance = 2
+	progressive_movement_chance = 1.5
+	regressive_movement_chance = 0.1
+}
+
+lawgroup_political_parties = {
+	law_group_category = power_structure
+	base_enactment_days = 150
+	affected_by_regime_change = yes
+
+	progressive_movement_chance = 2.5
+	regressive_movement_chance = 0.25
+}
+
+lawgroup_elections = {
+	law_group_category = power_structure
+	base_enactment_days = 150
+	affected_by_regime_change = yes
+
+	progressive_movement_chance = 2.5
 	regressive_movement_chance = 0.25
 }
 
@@ -98,16 +89,16 @@ lawgroup_bureaucracy = {
 	regressive_movement_chance = 0.05
 }
 
-lawgroup_army_model = {
-	law_group_category = power_structure
-	
-	progressive_movement_chance = 1.5
-	regressive_movement_chance = 0.1
-}
-
-law_group_centralization = {
+lawgroup_church_and_state = {
 	law_group_category = power_structure
 	affected_by_regime_change = yes
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
+lawgroup_army_model = {
+	law_group_category = power_structure
 	
 	progressive_movement_chance = 1.5
 	regressive_movement_chance = 0.1
@@ -156,6 +147,14 @@ lawgroup_ownership_model = {
 	regressive_movement_chance = 0.15
 }
 
+lawgroup_agriculture_model = {
+	law_group_category = economy	
+	base_enactment_days = 150
+	
+	progressive_movement_chance = 3
+	regressive_movement_chance = 0.15
+}
+
 lawgroup_industry = {
 	law_group_category = economy	
 	base_enactment_days = 150
@@ -164,9 +163,15 @@ lawgroup_industry = {
 	regressive_movement_chance = 0.15
 }
 
+lawgroup_economic_focus = {
+	law_group_category = economy
+	
+	progressive_movement_chance = 1.5
+	regressive_movement_chance = 0.15
+}
+
 lawgroup_trade_unions = {
-	law_group_category = economy	
-	base_enactment_days = 150
+	law_group_category = economy
 	
 	progressive_movement_chance = 3
 	regressive_movement_chance = 0.15
@@ -192,7 +197,7 @@ lawgroup_taxation = {
 	regressive_movement_chance = 0.15
 }
 
-# Merged with Ownership Model
+# Split into Peasantry and Agriculture Model
 #lawgroup_land_reform = {
 #	law_group_category = economy
 #	enactment_approval_mult = 1.5 # people REALLY care about land reform
@@ -305,6 +310,14 @@ lawgroup_migration = {
 	
 	progressive_movement_chance = 1
 	regressive_movement_chance = 0.255
+}
+
+lawgroup_peasantry = {
+	law_group_category = human_rights	
+	base_enactment_days = 150
+	
+	progressive_movement_chance = 3
+	regressive_movement_chance = 0.15
 }
 
 lawgroup_slavery = {

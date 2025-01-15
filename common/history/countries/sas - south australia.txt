@@ -1,0 +1,27 @@
+﻿COUNTRIES = {
+	c:SAS ?= {
+		# set_next_election_date = ???
+		
+		effect_starting_technology_tier_2_tech = yes
+		
+		activate_law = law_type:law_republic
+activate_law = law_type:law_president_head_of_state
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_mixed_ownership
+activate_law = law_type:law_regulated_industry
+		activate_law = law_type:law_homesteading
+activate_law = law_type:law_free_peasantry
+
+		ig:ig_armed_forces = {
+			add_ruling_interest_group = yes
+		}
+	}
+}

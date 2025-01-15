@@ -1,4 +1,17 @@
 ﻿
+onaction_vi_update_parties = {
+	if = {
+		limit = {
+			has_law = law_type:law_no_political_parties
+		}
+
+		deactivate_parties = yes
+	}
+	else = {
+		update_party_support = yes
+	}
+}
+
 onaction_vi_modifier_birthrate = {
 
 	set_local_variable = {
@@ -126,5 +139,14 @@ onaction_vi_polish_independence = {
 				}
 			}
 		}
+	}
+}
+
+onaction_vi_update_taxes = {
+	remove_modifier = modifier_vi_government_dividends
+
+	add_modifier = {
+		name = modifier_vi_government_dividends
+		multiplier = vi_government_dividends_value
 	}
 }

@@ -1,0 +1,45 @@
+﻿
+vi_politician_roles_redirect = {
+	type = character
+	
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = vi_character_role_politician
+	}
+
+	text = {
+		trigger = {
+			is_head_of_state = yes
+		}
+		localization_key = vi_head_of_state_and_politician
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		fallback = yes
+		localization_key = vi_character_role_politician
+	}
+}
+
+vi_ruler_roles_redirect = {
+	type = character
+
+	text = {
+		trigger = {
+			is_head_of_state = yes
+		}
+		localization_key = vi_ruler_and_politician
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		fallback = yes
+		localization_key = vi_character_role_ruler
+	}
+}

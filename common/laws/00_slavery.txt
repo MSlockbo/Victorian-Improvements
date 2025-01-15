@@ -68,7 +68,7 @@ law_slavery_banned = {
 		# This was funny while it lasted.
 		if = {
 			limit = { 
-				has_law = law_type:law_council_republic
+				has_law = law_type:law_workers_council
 			}
 			add = 750
 		}

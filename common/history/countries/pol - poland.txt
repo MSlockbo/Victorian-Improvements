@@ -4,14 +4,21 @@
 		add_technology_researched = napoleonic_warfare
 
 		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_ruler_head_of_state
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_coalition_parties
 		activate_law = law_type:law_landed_voting 
-		activate_law = law_type:law_serfdom
-		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_appointed_bureaucrats
+
+		activate_law = law_type:law_hereditary_ownership
+		activate_law = law_type:law_hereditary_agriculture
+		activate_law = law_type:law_land_based_taxation
+
 		activate_law = law_type:law_national_supremacy
-		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_right_of_assembly
 		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_hereditary_agriculture
+activate_law = law_type:law_serfdom
 
 		ig:ig_landowners = { 
 			add_ruling_interest_group = yes

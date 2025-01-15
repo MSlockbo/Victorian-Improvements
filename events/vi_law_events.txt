@@ -1,0 +1,11 @@
+﻿
+namespace = vi_law_events
+
+vi_law_events.1 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		onaction_vi_update_taxes = yes
+	}
+}

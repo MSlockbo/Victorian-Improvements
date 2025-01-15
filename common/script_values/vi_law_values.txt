@@ -1,0 +1,7 @@
+﻿
+vi_government_dividends_value = {
+	add = modifier:tax_government_dividends_add
+	multiply = modifier:country_government_dividends_waste_add
+	multiply = this.gdp
+	divide = 100
+}

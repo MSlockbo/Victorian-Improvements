@@ -9,6 +9,7 @@
             is_subject = no
             has_law = law_type:law_protected_speech
             has_law = law_type:law_right_of_assembly
+            has_law = law_type:law_freedom_of_speech
         }
 		custom_tooltip = {
 			text = christ_of_nations_button_tt_2

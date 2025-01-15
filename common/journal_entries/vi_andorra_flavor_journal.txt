@@ -1,0 +1,80 @@
+﻿
+
+je_vi_andorra_coregency = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	group = je_group_historical_content
+
+	scripted_progress_bar = vi_andorra_biregency_progress_bar
+
+	immediate = {
+		c:FRA = {
+			save_scope_as = france_scope
+			save_scope_as = next_suzerain_scope
+		}
+		c:SPA = {
+			save_scope_as = spain_scope
+			save_scope_as = current_suzerain_scope
+		}
+	}
+
+	complete = {
+		is_subject = no
+
+		hidden_trigger = {
+			NOT = { has_variable = ignore_regency_change }
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						scope:journal_entry ?= {
+							"scripted_bar_value(vi_andorra_biregency_progress_bar)" < 1
+						}
+					}
+
+					# Reset the Progress Bar
+					scope:journal_entry ?= {
+						add_progress = {
+							name = vi_andorra_biregency_progress_bar
+							value = 60
+						}
+					}
+
+					set_variable = ignore_regency_change
+
+					overlord = {
+						remove_diplomatic_pact = {
+							country = root
+							type = coregency
+						}
+					}
+
+					scope:next_suzerain_scope = {
+						create_diplomatic_pact = {
+							country = root
+							type = coregency
+						}
+					}
+
+					scope:current_suzerain_scope = {
+						save_scope_as = next_suzerain_scope
+					}
+
+					overlord = {
+						save_scope_as = current_suzerain_scope
+					}
+
+					remove_variable = ignore_regency_change
+				}
+			}
+		}
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

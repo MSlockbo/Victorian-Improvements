@@ -1127,7 +1127,7 @@
 			}
 			create_pop = {
 				culture = vietnamese
-				religion = confucian
+				religion = mahayana
 				size = 641220
 			}
 			create_pop = {
@@ -1162,7 +1162,7 @@
 			}
 			create_pop = {
 				culture = vietnamese
-				religion = confucian
+				religion = mahayana
 				size = 400333
 			}
 			create_pop = {
@@ -1193,7 +1193,7 @@
 			}
 			create_pop = {
 				culture = vietnamese
-				religion = confucian
+				religion = mahayana
 				size = 152396
 			}
 			create_pop = {

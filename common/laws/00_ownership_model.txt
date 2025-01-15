@@ -1,0 +1,469 @@
+
+law_hereditary_ownership = {
+	group = lawgroup_ownership_model
+	
+	icon = "gfx/interface/icons/law_icons/traditionalism.dds"
+	
+	progressiveness = -50
+	
+	disallowing_laws = {
+		law_workers_council
+	}
+		
+	on_activate = {
+	}
+	
+	modifier = {
+		country_private_construction_allocation_mult = 0.25
+		country_government_dividends_reinvestment_add = 0.25
+		building_nationalization_cost_mult = 1.0
+		building_nationalization_investment_return_add = 0.1
+
+		country_aristocrats_pol_str_mult = 0.25
+		country_clergymen_pol_str_mult = 0.25
+		country_farmers_pol_str_mult = 0.25
+
+		country_disable_nationalization_without_compensation_bool = yes
+	}
+
+	# AI should never switch back to traditionalism
+	ai_will_do = {
+		always = no
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}
+
+law_private_ownership = {
+	group = lawgroup_ownership_model
+	
+	icon = "gfx/interface/icons/law_icons/laissez_faire.dds"
+	
+	progressiveness = 50
+	
+	unlocking_technologies = {
+		international_trade
+	}
+	
+	on_activate = {
+	}
+	
+	modifier = {
+		country_private_construction_allocation_mult = 0.50
+		country_government_dividends_reinvestment_add = 0.50
+		building_nationalization_cost_mult = 1.0
+		country_max_companies_add = 1
+
+		country_capitalists_pol_str_mult = 0.25
+		country_shopkeepers_pol_str_mult = 0.25
+
+		country_disable_nationalization_without_compensation_bool = yes
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+		
+		if = {
+			limit = { 
+				has_modifier = shogun_ig_forced_to_open_market
+				has_journal_entry = je_meiji_main
+				has_law = law_type:law_hereditary_ownership
+				has_journal_entry = je_great_reforms_serfdom
+			}
+			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
+		}	
+
+		# AI should really try to get out of Traditionalism under the right circumstances
+		if = {
+			limit = {
+				has_law = law_type:law_hereditary_ownership
+				NOT = { has_strategy = ai_strategy_reactionary_agenda }
+				OR = {
+					NOT = { has_strategy = ai_strategy_conservative_agenda }
+					any_political_movement = {
+						law_stance = {
+							law = law_type:law_private_ownership
+							value > neutral
+						}	
+						political_movement_support >= 0.10
+					}			
+				}	
+			}
+			add = 1000
+		}		
+	}	
+}
+
+law_mixed_ownership = {
+	group = lawgroup_ownership_model
+	
+	icon = "gfx/interface/icons/law_icons/interventionism.dds"
+	
+	progressiveness = 50
+	
+	disallowing_laws = {
+		law_serfdom
+		law_anarchy
+	}
+	
+	on_activate = {
+	}
+	
+	unlocking_technologies = {
+		manufacturies
+	}
+	
+	modifier = {
+		country_private_construction_allocation_mult = 0.40
+		country_government_dividends_reinvestment_add = 0.75
+		building_nationalization_cost_mult = 0.75
+		country_max_companies_add = 1
+		
+		building_group_bg_manufacturing_allowed_collectivization_add = 0.5
+		building_group_bg_extraction_allowed_collectivization_add = 0.5
+		building_group_bg_power_allowed_collectivization_add = 0.5
+		building_group_bg_private_infrastructure_allowed_collectivization_add = 0.5
+		building_group_bg_service_allowed_collectivization_add = 0.5
+		building_group_bg_urban_facilities_allowed_collectivization_add = 0.5
+		building_group_bg_power_allowed_collectivization_add = 0.5
+
+
+		country_capitalists_pol_str_mult = 0.10
+		country_shopkeepers_pol_str_mult = 0.10
+		interest_group_ig_trade_unions_pol_str_mult = 0.10
+
+		country_disable_nationalization_without_compensation_bool = yes
+		country_disable_privatization_bool = yes
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+		
+		if = {
+			limit = { 
+				OR = {
+					has_journal_entry = je_sick_man_bureaucracy
+					has_modifier = shogun_ig_forced_to_open_market
+					has_journal_entry = je_meiji_main
+					has_journal_entry = je_great_reforms_serfdom
+				}
+				has_law = law_type:law_hereditary_ownership
+			}
+			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
+		}
+
+		# AI should really try to get out of Traditionalism under the right circumstances
+		if = {
+			limit = {
+				has_law = law_type:law_hereditary_ownership
+				NOT = { has_strategy = ai_strategy_reactionary_agenda }
+				OR = {
+					NOT = { has_strategy = ai_strategy_conservative_agenda }
+					any_political_movement = {
+						law_stance = {
+							law = law_type:law_regulated_industry
+							value > neutral
+						}	
+						political_movement_support >= 0.10
+					}			
+				}	
+			}
+			add = 1000
+		}
+	}
+}
+
+law_cooperative_ownership = {
+	group = lawgroup_ownership_model
+	
+	icon = "gfx/interface/icons/law_icons/cooperative_ownership.dds"
+	
+	progressiveness = 100
+	
+	unlocking_laws = {
+		law_slavery_banned
+	}
+	
+	on_activate = {		
+		custom_tooltip = {
+			text = enact_law_radical_leftist_economy_warning_desc
+		}	
+	}
+	
+	modifier = {
+		country_private_construction_allocation_mult = 0.35
+		country_government_dividends_reinvestment_add = 1.0
+		building_nationalization_cost_mult = 1.0
+		
+		building_group_bg_manufacturing_allowed_collectivization_add = 1.0
+		building_group_bg_extraction_allowed_collectivization_add = 1.0
+		building_group_bg_power_allowed_collectivization_add = 1.0
+		building_group_bg_private_infrastructure_allowed_collectivization_add = 1.0
+		building_group_bg_service_allowed_collectivization_add = 1.0
+		building_group_bg_urban_facilities_allowed_collectivization_add = 1.0
+		building_group_bg_power_allowed_collectivization_add = 1.0
+
+		interest_group_ig_trade_unions_pol_str_mult = 0.25
+
+		country_disable_nationalization_without_compensation_bool = yes
+		country_foreign_collectivization_bool = yes
+	}
+	
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+		
+		if = {
+			limit = { 
+				has_law = law_type:law_workers_council
+			}
+			add = 250
+		}
+		
+		if = {
+			limit = { 
+				has_law = law_type:law_workers_council
+			}
+			add = 100
+		}
+	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_cooperative_ownership			
+			}
+			
+			add = base_impose_law_weight
+			multiply = 10.0
+		}
+			
+		if = {
+			limit = {
+				scope:target_country = {
+					c:BIC ?= this
+					OR = {	
+						has_journal_entry = je_british_dictate_plantations
+						has_journal_entry = je_british_dictate_military
+						has_journal_entry = je_british_dictate_universities
+					}
+				}
+			}
+			multiply = 0
+		}
+	}	
+}
+
+law_state_ownership = {
+	group = lawgroup_ownership_model
+	
+	icon = "gfx/interface/icons/law_icons/command_economy.dds"
+	
+	progressiveness = 100
+	
+	unlocking_technologies = {
+		central_planning
+	}
+	
+	on_activate = {
+		seize_investment_pool = yes
+		custom_tooltip = {
+			text = enact_law_radical_leftist_economy_warning_desc
+		}	
+	}
+	
+	modifier = {
+		country_authority_mult = 0.25
+		country_private_construction_allocation_mult = 0.1
+		country_government_dividends_efficiency_add = 0.4
+		building_nationalization_cost_mult = -0.5
+		building_nationalization_radicals_mult = -0.75
+
+		country_bureaucrats_pol_str_mult = 0.25
+		country_clerks_pol_str_mult = 0.25
+
+		country_disable_privatization_bool = yes
+		country_disable_investment_pool_bool = yes
+	}
+	
+	ai_will_do = {
+		OR = {
+			has_law = law_type:law_technocracy
+			AND = {
+				has_law = law_type:law_workers_council
+				ruler ?= {
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_communist
+				}			
+			}
+		}
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+		
+		if = {
+			limit = { 
+				has_law = law_type:law_workers_council
+			}
+			add = 250
+		}
+		
+		if = {
+			limit = { 
+				has_law = law_type:law_technocracy
+			}
+			add = 100
+		}
+	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_state_ownership			
+			}
+			
+			add = base_impose_law_weight
+			multiply = 10.0
+		}
+			
+		if = {
+			limit = {
+				scope:target_country = {
+					c:BIC ?= this
+					OR = {	
+						has_journal_entry = je_british_dictate_plantations
+						has_journal_entry = je_british_dictate_military
+						has_journal_entry = je_british_dictate_universities
+					}
+				}
+			}
+			multiply = 0
+		}
+	}	
+}
+
+law_extraction_ownership = {
+	group = lawgroup_ownership_model
+	
+	icon = "gfx/interface/icons/law_icons/extraction_economy.dds"
+	progressiveness = 0
+	
+	unlocking_technologies = {
+		colonization
+	}
+
+	can_enact = {
+		trigger_if = {
+			limit = {
+				game_date > 1836.1.1
+			}
+			is_subject = yes # Subject relationships load after laws' validities are checked
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+
+	on_activate = {
+		custom_tooltip = industry_banned_tt
+		custom_tooltip = {
+			text = industry_banned_destroy_tt
+			every_scope_state = {
+				if = {
+					limit = {
+						has_building = building_chemical_plants
+					}
+					remove_building = building_chemical_plants
+				}
+				if = {
+					limit = {
+						has_building = building_synthetics_plants
+					}
+					remove_building = building_synthetics_plants
+				}
+				if = {
+					limit = {
+						has_building = building_steel_mills
+					}
+					remove_building = building_steel_mills
+				}
+				if = {
+					limit = {
+						has_building = building_motor_industry
+					}
+					remove_building = building_motor_industry
+				}
+				if = {
+					limit = {
+						has_building = building_war_machine_industry
+					}
+					remove_building = building_war_machine_industry
+				}
+				if = {
+					limit = {
+						has_building = building_electrics_industry
+					}
+					remove_building = building_electrics_industry
+				}
+				if = {
+					limit = {
+						has_building = building_munition_plants
+					}
+					remove_building = building_munition_plants
+				}
+			}
+		}
+	}
+
+	modifier = {
+		country_private_construction_allocation_mult = 0.50
+		building_nationalization_investment_return_add = 0.50
+		country_economic_dependence_on_overlord_add = 0.5
+
+		country_disable_nationalization_without_compensation_bool = yes
+	}
+
+	ai_will_do = {
+		always = no
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}

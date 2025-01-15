@@ -1,0 +1,106 @@
+﻿l_english:
+  law_republic: "Republic"
+
+  lawgroup_head_of_state: "Head of State"
+  law_ruler_head_of_state: "Ruler"
+  law_president_head_of_state: "President"
+  law_shared_head_of_state: "Shared"
+  law_pm_head_of_state: "Prime Minister"
+
+  lawgroup_centralization: "Centralization"
+  law_unitary: "Unitary"
+  law_administrative_divisions: "Administrative Divisions"
+  law_federalized: "Federalized"
+  law_confederated: "Confederated"
+  law_devolved: "Devolved"
+
+  lawgroup_legislative_body: "Legislative Body"
+  law_plutocracy: "Plutocracy"
+  law_parliament: "Parliament"
+
+  lawgroup_political_parties: "Political Parties"
+  law_no_political_parties: "No Parties"
+  law_coalition_parties: "Coalitions"
+  law_multiparty_system: "Multiparty System"
+
+  lawgroup_elections: "Elections"
+  law_no_elections: "No Elections"
+
+  law_meritocratic_bureaucrats: "Meritocratic Bureaucrats"
+
+  law_wiretapping: "Wiretapping"
+  law_mass_surveillance: "Mass Surveillance"
+
+  law_safety_officers: "Safety Officers"
+
+  lawgroup_prison_model: "Prison Model"
+  law_no_prisons: "No Prisons"
+  law_indentured_servitude: "Indentured Servitude"
+  law_correctional_prisons: "Correctional Prisons"
+  law_vocational_prisons: "Vocational Prisons"
+
+  lawgroup_ownership_model: "Ownership Model"
+  law_hereditary_ownership: "Hereditary Ownership"
+  law_private_ownership: "Private Ownership"
+  law_mixed_ownership: "Mixed Ownership"
+  law_state_ownership: "State Ownership"
+  law_extraction_ownership: "Extraction Ownership"
+
+  lawgroup_agriculture_model: "Agriculture Model"
+  law_hereditary_agriculture: "Hereditary Agriculture"
+  law_privatized_agriculture: "Privatized Agriculture"
+  law_state_agriculture: "State Agriculture"
+
+  lawgroup_economic_focus: "Economic Focus"
+  law_agrarian_focus: "Agrarian Focus"
+  law_resource_focus: "Resource Focus"
+  law_industry_focus: "Industry Focus"
+  law_service_focus: "Service Focus"
+
+  lawgroup_industry: "Industry"
+  law_unregulated_industry: "Unregulated Industry"
+  law_regulated_industry: "Regulated Industry"
+  
+  lawgroup_trade_unions: "Trade Unions"
+  law_unions_banned: "Unions Banned"
+  law_company_unions: "Company Unions"
+  law_mixed_unions: "Mixed Unions"
+  law_workers_unions: "Workers Unions"
+  law_state_unions: "State Unions"
+
+  law_government_dividends: "Government Dividends"
+  tax_government_dividends_add: "Government Dividends"
+  modifier_vi_government_dividends: "Government Dividends"
+
+  lawgroup_housing: "Housing"
+  law_tenant_housing: "Tenant Housing"
+  law_mixed_housing: "Mixed Housing"
+  law_personal_housing: "Personal Housing"
+  law_communal_housing: "Communal Housing"
+  law_state_housing: "State Housing"
+
+  law_no_hospitals: "No Hospitals"
+  law_religious_hospitals: "Religious Hospitals"
+  law_private_hospitals: "Private Hospitals"
+  law_worker_hospitals: "Worker-Run Hospitals"
+  law_state_hospitals: "State Hospitals"
+
+  law_freedom_of_speech: "Freedom of Speech"
+
+  law_child_labor_banned: "Child Labor Banned"
+
+  lawgroup_marriage_rights: "Marriage Rights"
+  law_legal_guardianship: "Legal Guardianship"
+  law_polygyny: "Polygyny"
+  law_monogamy: "Monogamy"
+  law_polygamy: "Polygamy"
+
+  lawgroup_queer_rights: "Queer Rights"
+  law_sodomy_laws: "Sodomy Laws"
+  law_no_queer_protections: "No Protections"
+  law_queer_recognized_class: "Recognized Class"
+  law_queer_marriage_rights: "Marriage Rights"
+  law_queer_protected_class: "Protected Class"
+
+  lawgroup_peasantry: "Peasantry"
+  law_free_peasantry: "Free Peasantry"

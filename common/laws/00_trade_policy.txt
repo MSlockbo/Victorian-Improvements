@@ -106,7 +106,7 @@ law_free_trade = {
 	progressiveness = 50
 	
 	disallowing_laws = {
-		law_command_economy
+		law_state_ownership
 	}	
 	
 	unlocking_technologies = {
@@ -157,7 +157,7 @@ law_isolationism = {
 	progressiveness = -50
 	
 	disallowing_laws = {
-		law_laissez_faire
+		law_unregulated_industry
 	}
 	
 	can_enact = {

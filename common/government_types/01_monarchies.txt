@@ -1077,7 +1077,7 @@ gov_decentralized_realm = {
 	possible = {
 		is_country_type = decentralized
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree
+		has_law = law_type:law_autocracy 
 		#country_tier = principality
 	}
 
@@ -1430,7 +1430,7 @@ gov_absolute_principality_muslim = {
 	
 	possible = {
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree 
+		has_law = law_type:law_autocracy 
 		country_tier = principality
 		country_is_in_europe = no
 		OR = {
@@ -1458,7 +1458,7 @@ gov_absolute_empire = {
 	
 	possible = {
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree 
+		has_law = law_type:law_autocracy 
 		OR = {
 			country_tier = hegemony
 			country_tier = empire
@@ -1581,7 +1581,7 @@ gov_absolute_kingdom = {
 	
 	possible = {
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree 
+		has_law = law_type:law_autocracy 
 		country_tier = kingdom
 	}
 
@@ -1676,7 +1676,7 @@ gov_absolute_county = {
 	
 	possible = {
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree 
+		has_law = law_type:law_autocracy 
 		country_tier = city_state
 	
 		country_is_in_europe = yes
@@ -1761,7 +1761,7 @@ gov_absolute_duchy = {
 	
 	possible = {
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree 
+		has_law = law_type:law_autocracy 
 		country_tier = principality
 	
 		country_is_in_europe = yes
@@ -1844,7 +1844,7 @@ gov_absolute_principality = {
 	
 	possible = {
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree 
+		has_law = law_type:law_autocracy 
 		country_tier = principality
 		country_is_in_europe = no
 	}
@@ -1919,7 +1919,7 @@ gov_absolute_grand_duchy = {
 	
 	possible = {
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree 
+		has_law = law_type:law_autocracy 
 		country_tier = grand_principality
 
 		country_is_in_europe = yes
@@ -1996,7 +1996,7 @@ gov_absolute_grand_principality = {
 	
 	possible = {
 		has_law = law_type:law_monarchy
-		has_law = law_type:law_rule_by_decree 
+		has_law = law_type:law_autocracy 
 		country_tier = grand_principality
 		country_is_in_europe = no
 	}

@@ -1229,7 +1229,11 @@ STATES = {
 	s:STATE_CATALONIA = {
 		create_state = {
 			country = c:SPA
-			owned_provinces = { xE0C020 xD616D2 x08B4D6 x11E041 x945748 x906040 x936FF3 x2914C3 x0C64AC xC2FFD9 x890622 }
+			owned_provinces = { xE0C020 xD616D2 x08B4D6 x11E041 x945748 x906040 x936FF3 x2914C3 xC2FFD9 x890622 }
+		}
+		create_state = {
+			country = c:ADR
+			owned_provinces = { x0C64AC }
 		}
 		
 		add_homeland = cu:spanish

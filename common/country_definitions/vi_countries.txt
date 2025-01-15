@@ -42,3 +42,25 @@ LIV = {
 	cultures = { latvian estonian }
 	capital = STATE_LATVIA
 }
+
+ADR = {
+	color = { 91 70 220 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { catalan }
+	capital = STATE_CATALONIA
+}
+
+MOC = {
+	color = { 112 89 215 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { occitan }
+	capital = STATE_PROVENCE
+}

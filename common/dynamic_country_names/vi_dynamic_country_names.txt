@@ -66,6 +66,9 @@ MGL = {
 				is_subject = yes
 				scope:overlord = {
 					this = c:CHI
+					any_subject_or_below = {
+						this = c:IMG
+					}
 				}
 			}
 		}
@@ -84,19 +87,18 @@ KOR = {
 			exists = scope:actor
 			scope:actor ?= {
 				OR = {
-					has_law = law_type:law_presidential_republic
-					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_republic
 				}
 			}
 		}
 	}
 
 	dynamic_country_name = {
-		name = vi_dyn_democratic_peoples_republic_of_korea
+		name = vi_dyn_dprk
 		adjective = KOR_ADJ
 
 		is_main_tag_only = yes
-		priority = 10
+		priority = 20
 
 		trigger = {
 			coa_def_communist_flag_trigger = yes
@@ -130,8 +132,7 @@ RUS = {
 			exists = scope:actor
 			scope:actor ?= {
 				OR = {
-					has_law = law_type:law_presidential_republic
-					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_republic
 				}
 			}
 		}

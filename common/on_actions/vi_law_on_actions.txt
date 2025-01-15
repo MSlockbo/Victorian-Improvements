@@ -1,0 +1,27 @@
+﻿
+on_monthly_pulse_country = {
+	effect = {
+		onaction_vi_update_parties = yes
+		onaction_vi_update_taxes = yes
+	}
+}
+
+on_election_campaign_start = {
+	effect = {
+		onaction_vi_update_parties = yes
+	}
+}
+
+on_party_created = {
+	effect = {
+		owner = {
+			if = {
+				limit = {
+					has_law = law_type:law_no_political_parties
+				}
+		
+				deactivate_parties = yes
+			}
+		}
+	}
+}
