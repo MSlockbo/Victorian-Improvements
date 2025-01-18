@@ -501,9 +501,9 @@ generic_laws.6 = {
 		enacting_any_law = yes
 		exists = currently_enacting_law.type
 		NOR = {
-			is_enacting_law = law_type:law_workers_council
 			is_enacting_law = law_type:law_republic
 			is_enacting_law = law_type:law_theocracy
+			is_enacting_law = law_type:law_corporate_state
 		}
 		ruler = {
 			OR = {

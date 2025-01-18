@@ -391,9 +391,10 @@ republican_france = {
 	possible = {
 		exists = c:FRA
 		THIS = c:FRA
-		NOT = { has_law = law_type:law_autocracy }
-		OR = {
-			has_law = law_type:law_republic
+		has_law = law_type:law_republic
+		NOR = { 
+			has_law = law_type:law_autocracy 
+			has_law = law_type:law_workers_council
 		}
 	}
 }

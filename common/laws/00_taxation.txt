@@ -355,22 +355,22 @@ law_government_dividends = {
 	
 	tax_modifier_low = {
 		tax_consumption_add = 0.275
-		tax_government_dividends_add = 0.275
+		tax_government_dividends_add = 0.4
 	}
 	
 	tax_modifier_medium = {
 		tax_consumption_add = 0.35
-		tax_government_dividends_add = 0.35
+		tax_government_dividends_add = 0.6
 	}	
 	
 	tax_modifier_high = {
 		tax_consumption_add = 0.425
-		tax_government_dividends_add = 0.425
+		tax_government_dividends_add = 0.8
 	}
 	
 	tax_modifier_very_high = {
 		tax_consumption_add = 0.50
-		tax_government_dividends_add = 0.50
+		tax_government_dividends_add = 1.0
 	}
 
 	on_activate = {

@@ -65,6 +65,10 @@ STATES = {
 	}
 	s:STATE_PROVENCE = {
 		create_state = {
+			country = c:MOC
+			owned_provinces = { xD9A38C }
+		}
+		create_state = {
 			country = c:SAR
 			owned_provinces = { x5080E0 }
 		}

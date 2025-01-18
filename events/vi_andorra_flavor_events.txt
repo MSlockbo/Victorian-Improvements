@@ -25,3 +25,12 @@ vi_AND_events.1 = { # Change Regent
 		default_option = yes
 	}
 }
+
+vi_AND_events.2 = { # Fixup subject type
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		change_subject_type = subject_type_coregency
+	}
+}

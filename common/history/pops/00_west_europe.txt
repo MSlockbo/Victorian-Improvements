@@ -432,6 +432,16 @@
 		}
 	}
 	s:STATE_PROVENCE = {
+		region_state:MOC = {
+			create_pop = {
+				culture = north_italian
+				size = 13100
+			}
+			create_pop = {
+				culture = occitan
+				size = 8100
+			}
+		}
 		region_state:SAR = {
 			create_pop = {
 				culture = north_italian

@@ -1,0 +1,45 @@
+﻿
+vi_set_tax_level_very_low = {
+	scope = country
+
+	effect = {
+		set_tax_level = very_low
+		onaction_vi_update_taxes = yes
+	}
+}
+
+vi_set_tax_level_low = {
+	scope = country
+
+	effect = {
+		set_tax_level = low
+		onaction_vi_update_taxes = yes
+	}
+}
+
+vi_set_tax_level_medium = {
+	scope = country
+
+	effect = {
+		set_tax_level = medium
+		onaction_vi_update_taxes = yes
+	}
+}
+
+vi_set_tax_level_high = {
+	scope = country
+
+	effect = {
+		set_tax_level = high
+		onaction_vi_update_taxes = yes
+	}
+}
+
+vi_set_tax_level_very_high = {
+	scope = country
+
+	effect = {
+		set_tax_level = very_high
+		onaction_vi_update_taxes = yes
+	}
+}

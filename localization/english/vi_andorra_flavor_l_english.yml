@@ -3,3 +3,7 @@
   je_vi_andorra_coregency_reason: "A treaty between [SCOPE.sCountry('france_scope').GetName] and [SCOPE.sCountry('spain_scope').GetName] established a coregency of the province of Andorra. Every five years, suzerainity over the province transfers from one to the other.\n\nThe current Suzerain is [SCOPE.GetRootScope.GetCountry.GetOverlord.GetName]."
   vi_andorra_biregency_progress_bar: ""
   vi_andorra_biregency_progress_bar_desc: "#v [LabelingHelper.GetMultiTypeGameTimeDifferenceFromMonths(FixedPointToInt(JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)), '(int32)2', '' )]#!"
+  coregency: "Coregency"
+  coregency_desc: "A subject type where two countries share Suzerainity over a subject."
+  subject_type_coregency: "Coregency"
+  subject_type_coregency_desc: "A subject type where two countries share Suzerainity over a subject."

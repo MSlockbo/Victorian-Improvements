@@ -1,7 +1,22 @@
 ﻿
 vi_government_dividends_value = {
-	add = modifier:tax_government_dividends_add
-	multiply = modifier:country_government_dividends_waste_add
-	multiply = this.gdp
-	divide = 100
+	value = 0
+	every_scope_state = {
+		add = {
+			value = this.gdp
+			multiply = {
+				value = 1
+				subtract = modifier:state_tax_waste_add
+			}
+			multiply = { 
+				value = modifier:state_tax_collection_mult
+				add = 1
+			}
+		}
+	}
+	multiply = {
+		value = 1
+		subtract = modifier:country_government_dividends_waste_add
+	}
+	multiply = modifier:tax_government_dividends_add
 }

@@ -9,9 +9,10 @@ state_bureaucrats_investment_pool_efficiency_mult={
 }
 
 tax_government_dividends_add={
-	decimals=0
+	decimals=2
 	color=neutral
-	percent=yes
+	percent=no
+	prefix = "MONEY_PREFIX"
 	game_data = {
 		ai_value=0
 	}

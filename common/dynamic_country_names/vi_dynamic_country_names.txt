@@ -86,9 +86,7 @@ KOR = {
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
-				OR = {
-					has_law = law_type:law_republic
-				}
+				has_law = law_type:law_republic
 			}
 		}
 	}
@@ -133,6 +131,25 @@ RUS = {
 			scope:actor ?= {
 				OR = {
 					has_law = law_type:law_republic
+				}
+			}
+		}
+	}
+}
+
+SIA = {
+	dynamic_country_name = {
+		name = vi_dyn_c_thailand
+		adjective = vi_dyn_c_thailand_adj
+
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				NAND = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_autocracy
 				}
 			}
 		}

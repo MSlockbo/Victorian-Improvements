@@ -190,6 +190,14 @@ pmg_synthetic_silk = {
 	}
 }
 
+pmg_synthetic_rubber = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_synthetic_rubber
+		pm_synthetic_rubber
+	}
+}
+
 pmg_steelmaking_process = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -223,6 +231,7 @@ pmg_automobile_production = {
 	production_methods = {
 		pm_automobiles_disabled
 		pm_automobile_production
+		pm_electric_automobile_production
 	}
 }
 

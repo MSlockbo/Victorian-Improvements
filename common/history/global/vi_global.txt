@@ -1,0 +1,12 @@
+﻿GLOBAL = {
+	c:ADR ?= {
+		trigger_event = {
+			id = vi_AND_events.2
+			days = 1
+		}
+	}
+
+	c:BGL = {
+		vi_make_decolonization_target = yes
+	}
+}

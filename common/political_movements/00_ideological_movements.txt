@@ -1054,6 +1054,8 @@ movement_royalist_absolutist = {
 						OR = {
 							is_enacting_law = law_type:law_republic
 							is_enacting_law = law_type:law_theocracy
+							is_enacting_law = law_type:law_corporate_state
+
 							is_enacting_law = law_type:law_workers_council	
 							is_enacting_law = law_type:law_parliament	
 						}					
@@ -1353,8 +1355,9 @@ movement_royalist_constitutional = {
 						OR = {
 							is_enacting_law = law_type:law_republic
 							is_enacting_law = law_type:law_theocracy
-							is_enacting_law = law_type:law_workers_council	
-							is_enacting_law = law_type:law_parliament
+							is_enacting_law = law_type:law_corporate_state
+
+							is_enacting_law = law_type:law_workers_council
 						}					
 					}
 					
@@ -1616,10 +1619,10 @@ movement_labor = { # Explicitly non-socialist labour movement
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
-			add = 0.10
+			add = 1
 		}
 
 		if = { # If a more radical movement exists, it'll poach radicals from this one.
@@ -1929,10 +1932,11 @@ movement_socialist = {
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
-			add = 0.10
+			multiply = 9
+			add = 1
 		}
 
 		multiply = { # Multiplied by 1.5x max
@@ -3453,6 +3457,8 @@ movement_radical = {
 		has_technology_researched = egalitarianism
 		NOR = {
 			has_law = law_type:law_republic
+			has_law = law_type:law_corporate_state
+			has_law = law_type:law_parliament
 			has_law = law_type:law_workers_council
 		}
 	}	

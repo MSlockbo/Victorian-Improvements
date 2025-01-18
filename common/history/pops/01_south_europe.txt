@@ -283,15 +283,15 @@
 		region_state:ADR = {
 			create_pop = {
 				culture = catalan
-				size = 13100
-			}
-			create_pop = {
-				culture = occitan
 				size = 6100
 			}
 			create_pop = {
+				culture = occitan
+				size = 1200
+			}
+			create_pop = {
 				culture = spanish
-				size = 5400
+				size = 1200
 			}
 		}
 		region_state:SPA = {

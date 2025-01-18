@@ -3105,7 +3105,7 @@ FRA = {
 		adjective = dyn_c_french_commune_adj
 
 		is_main_tag_only = yes
-		priority = 10
+		priority = 20
 		
 		trigger = {
 			exists = scope:actor

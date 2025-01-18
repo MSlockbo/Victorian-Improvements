@@ -221,11 +221,7 @@ achievement_folkhemmet = {
 		}
 	}
 	happened = {
-		has_law = law_type:law_republic
-		NOR = { 
-			has_law = law_type:law_workers_council
-			has_law = law_type:law_cooperative_ownership
-		}
+		has_law = law_type:law_corporate_state
         institution_investment_level = {
             institution = institution_social_security
             value = 5

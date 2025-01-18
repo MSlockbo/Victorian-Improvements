@@ -2570,13 +2570,13 @@
 		}
 	}
 	s:STATE_PROVENCE={
-		region_state:SAR={
+		region_state:MOC={
 			create_building={
 				building="building_fishing_wharf"
 				add_ownership={
 					building={
 						type="building_fishing_wharf"
-						country="c:SAR"
+						country="c:MOC"
 						levels=1
 						region="STATE_PROVENCE"
 					}

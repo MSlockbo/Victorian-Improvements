@@ -5,6 +5,7 @@
 		law_monarchy = strongly_approve
 		law_theocracy = approve
 		law_republic = neutral
+		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -421,7 +422,7 @@ ideology_isolationist = {
 	lawgroup_colonization = {
 		law_frontier_colonization = strongly_approve
 		law_no_colonial_affairs = approve
-		law_anti_colonialism = disapprove
+		#law_anti_colonialism = disapprove
 		law_colonial_resettlement = disapprove
 		law_colonial_exploitation = disapprove
 	}
@@ -455,6 +456,7 @@ ideology_moralist = {
 		law_monarchy = strongly_approve
 		law_theocracy = approve
 		law_republic = neutral
+		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -586,7 +588,7 @@ ideology_jingoist = {
 		law_frontier_colonization = approve
 		law_colonial_resettlement = approve
 		law_colonial_exploitation = approve
-		law_anti_colonialism = neutral
+		#law_anti_colonialism = neutral
 		law_no_colonial_affairs = neutral
 	}
 }
@@ -693,6 +695,7 @@ ideology_republican = {
 
 	lawgroup_governance_principles = {
 		law_republic = approve
+		law_corporate_state = neutral
 		law_theocracy = neutral
 		law_monarchy = neutral
 		law_anarchy = strongly_disapprove
@@ -845,6 +848,13 @@ ideology_egalitarian = {
 ideology_populist = {
 	icon = "gfx/interface/icons/ideology_icons/populist.dds"
 
+	lawgroup_head_of_state = {
+		law_ruler_head_of_state = disapprove
+		law_president_head_of_state = neutral
+		law_shared_head_of_state = approve
+		law_pm_head_of_state = strongly_approve
+	}
+
 	lawgroup_legislative_body = {
 		law_parliament = approve
 		law_workers_council = neutral
@@ -904,6 +914,7 @@ ideology_socialist = {
 	lawgroup_governance_principles = {
 		law_republic = approve
 		law_anarchy = neutral
+		law_corporate_state = strongly_disapprove
 		law_theocracy = strongly_disapprove
 		law_monarchy = strongly_disapprove
 	}
@@ -963,6 +974,7 @@ ideology_reactionary = {
 		law_theocracy = approve
 		law_monarchy = approve
 		law_republic = neutral
+		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -1008,6 +1020,7 @@ ideology_plutocratic = {
 	icon = "gfx/interface/icons/ideology_icons/plutocratic.dds"
 
 	lawgroup_governance_principles = {
+		law_corporate_state = approve
 		law_republic = neutral
 		law_monarchy = neutral
 		law_theocracy = disapprove
@@ -1045,7 +1058,7 @@ ideology_plutocratic = {
 		law_colonial_resettlement = neutral
 		law_frontier_colonization = neutral
 		law_no_colonial_affairs = neutral
-		law_anti_colonialism = disapprove
+		#law_anti_colonialism = disapprove
 	}
 }
 

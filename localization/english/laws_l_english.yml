@@ -248,8 +248,8 @@
  law_parliamentary_republic_desc:0 "A political system where power is held by the people and their elected representatives. The leader of the legislature acts as the Head of State and is referred to as $RULER_TITLE_CHANCELLOR$."
  law_theocracy:0 "Theocracy"
  law_theocracy_desc:0 "The government is ruled by a clergy and their interpretation of holy scripture. The Head of State is nominally the person of worship, though in practice a worldly representative selected by merit, status, or birth."
- law_workers_council:0 "Council Republic"
- law_workers_council_desc:0 "A political system where workers elect delegates to local councils. Extends concepts of workplace organization to general governance."
+ law_council_republic:0 "Council Republic"
+ law_council_republic_desc:0 "A political system where workers elect delegates to local councils. Extends concepts of workplace organization to general governance."
  law_corporate_state:0 "Corporate State"
  law_corporate_state_desc:0 "A political system based around institutionalized collaboration between officially recognized corporate groups. The state serves as a forum for negotiation between different social classes."
   
@@ -392,14 +392,14 @@
  lawgroup_economic_system:0 "Economic System"
  lawgroup_economic_system_desc:0 "The fundamental principles of your economy."
 
- law_hereditary_ownership:0 "Traditionalism"
- law_hereditary_ownership_desc:0 "Pre-industrial subsistence economy with little central control."
+ law_traditionalism:0 "Traditionalism"
+ law_traditionalism_desc:0 "Pre-industrial subsistence economy with little central control."
  law_agrarianism:0 "Agrarianism"
  law_agrarianism_desc:0 "A rural economy emphasizing agricultural development and community."
  law_cooperative_ownership:0 "Cooperative Ownership"
  law_cooperative_ownership_desc:0 "An economic system based around the concept of social ownership, where surplus production is distributed more evenly among the workers."
- law_state_ownership:0 "Command Economy"
- law_state_ownership_desc:0 "An inward-focused interventionist economy where the government directly manages most aspects of production."
+ law_command_economy:0 "Command Economy"
+ law_command_economy_desc:0 "An inward-focused interventionist economy where the government directly manages most aspects of production."
  law_laissez_faire:0 "Laissez-Faire"
  law_laissez_faire_desc:0 "A liberal economy founded on the principles of comparative advantage and that fewer government interventions means greater growth"
  law_interventionism:0 "Interventionism"
@@ -451,10 +451,10 @@
   
  law_no_hospitals:0 "No Health System"
  law_no_hospitals_desc:1 "The government does not fund any system of healthcare."
- law_religious_hospitals:0 "Charity Hospitals"
- law_religious_hospitals_desc:0 "Charitable organizations — often religious ones — provide some help to anyone who's sick or dying, to the degree they are able."
- law_private_hospitals:0 "Private Health Insurance"
- law_private_hospitals_desc:0 "Population health is managed through a system of privately owned hospitals paid through private health insurance programs, ensuring the well-being of those who can afford it with minimal impact on the government treasury."
+ law_charity_hospitals:0 "Charity Hospitals"
+ law_charity_hospitals_desc:0 "Charitable organizations — often religious ones — provide some help to anyone who's sick or dying, to the degree they are able."
+ law_private_health_insurance:0 "Private Health Insurance"
+ law_private_health_insurance_desc:0 "Population health is managed through a system of privately owned hospitals paid through private health insurance programs, ensuring the well-being of those who can afford it with minimal impact on the government treasury."
  law_public_health_insurance:0 "Public Health Insurance"
  law_public_health_insurance_desc:0 "The government provides a publicly funded health insurance program ensuring equal access to care for all."
  
@@ -477,7 +477,7 @@
  lawgroup_rights_of_women:0 "Rights of Women"
  lawgroup_rights_of_women_desc:0 "The legal regulations of the fairer sex."
   
- law_no_womens_rights:0 "Legal Guardianship"
+ law_no_womens_rights:0 "No Women's Rights"
  law_no_womens_rights_desc:0 "Women are legally under the guardianship of men and enjoy very few rights."
  law_women_own_property:0 "Propertied Women"
  law_women_own_property_desc:0 "Whether inherited or otherwise earned, even women have the right and duty to own and cherish their possessions."
@@ -562,8 +562,8 @@
  ideology_luddite_desc: "Luddites are opposed to industrial automation, or in more extreme cases to industry itself."
 
   
- law_extraction_ownership: "Extraction Economy"
- law_extraction_ownership_desc: "A colonial economic system which focuses on maximum extraction of capital for the benefit of the metropole."
+ law_extraction_economy: "Extraction Economy"
+ law_extraction_economy_desc: "A colonial economic system which focuses on maximum extraction of capital for the benefit of the metropole."
 
 # Land Reform Laws
  lawgroup_land_reform: "Land Reform"

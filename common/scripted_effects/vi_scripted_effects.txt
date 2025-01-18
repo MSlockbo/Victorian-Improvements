@@ -1,0 +1,7 @@
+﻿
+vi_make_decolonization_target = {
+	add_to_global_variable_list = {
+		name = vi_decolonization_targets
+		target = this
+	}
+}

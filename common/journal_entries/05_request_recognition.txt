@@ -28,9 +28,12 @@
 	}
 
 	complete = {
-		any_country = {
-			country_rank >= rank_value:great_power
-			relations:root >= relations_threshold:amicable
+		OR = {
+			any_country = {
+				country_rank >= rank_value:great_power
+				relations:root >= relations_threshold:amicable
+			}
+			prestige_rank < 10
 		}
 		custom_tooltip = { 
 			text = je_earn_recognition_complete_tt
@@ -64,7 +67,10 @@
 				limit = {
 					prestige_rank < 10
 				}
-				add = 2
+				change_variable = {
+					name = recognition_progress_var
+					add = 2
+				}
 			}
 			if = {
 				limit = {
@@ -122,7 +128,7 @@
 			if = {
 				limit = {
 					# Traditional economic system
-					has_law = law_type:law_traditionalism
+					has_law = law_type:law_hereditary_ownership
 				}
 				change_variable = {
 					name = recognition_progress_var

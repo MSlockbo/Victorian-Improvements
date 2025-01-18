@@ -223,6 +223,7 @@ building_synthetics_plants = {
 	production_method_groups = {
 		pmg_synthetic_dyes
 		pmg_synthetic_silk
+		pmg_synthetic_rubber
 	}
 	
 	required_construction = construction_cost_very_high

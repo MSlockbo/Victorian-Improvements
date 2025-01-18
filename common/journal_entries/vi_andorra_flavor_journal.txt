@@ -19,7 +19,7 @@ je_vi_andorra_coregency = {
 	}
 
 	complete = {
-		is_subject = no
+		NOT = { is_subject_type = subject_type_coregency }
 
 		hidden_trigger = {
 			NOT = { has_variable = ignore_regency_change }
@@ -32,7 +32,7 @@ je_vi_andorra_coregency = {
 				if = {
 					limit = {
 						scope:journal_entry ?= {
-							"scripted_bar_value(vi_andorra_biregency_progress_bar)" < 1
+							"scripted_bar_progress(vi_andorra_biregency_progress_bar)" < 1
 						}
 					}
 
@@ -46,13 +46,13 @@ je_vi_andorra_coregency = {
 
 					set_variable = ignore_regency_change
 
-					overlord = {
+					scope:current_suzerain_scope = {
 						remove_diplomatic_pact = {
 							country = root
 							type = coregency
 						}
 					}
-
+					
 					scope:next_suzerain_scope = {
 						create_diplomatic_pact = {
 							country = root

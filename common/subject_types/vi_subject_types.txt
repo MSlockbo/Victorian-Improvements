@@ -17,7 +17,7 @@ subject_type_coregency = {
 	diplomatic_action = coregency
 
 	autonomy_level = 2
-	category = same_as_personal_union
+	category = same_as_coregency
 
 	higher_autonomy_subject_type_alternatives = {
 		subject_type_protectorate

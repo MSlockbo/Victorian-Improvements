@@ -6,8 +6,8 @@ vi_andorra_biregency_progress_bar = {
 	default = yes
 	is_inverted = yes
 
-	start_value = 61
-	min_value = 1
+	start_value = 0
+	min_value = 0
 	max_value = 61 # 5 years
 
 	monthly_progress = {
