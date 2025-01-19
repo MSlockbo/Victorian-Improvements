@@ -127,6 +127,12 @@ ideology_laissez_faire = {
 		law_protectionism = disapprove
 		law_isolationism = strongly_disapprove
 	}
+
+	lawgroup_labor_rights = {
+		law_no_workers_rights = neutral
+		law_regulatory_bodies = disapprove
+		law_worker_protections = strongly_disapprove
+	}
 }
 
 ideology_individualist = {
@@ -964,6 +970,21 @@ ideology_socialist = {
 		law_regulated_industry = approve
 		law_industry_banned = disapprove
 		law_unregulated_industry = strongly_disapprove
+	}
+
+	lawgroup_education_system = {
+		law_public_schools = strongly_approve
+		law_religious_schools = neutral
+		law_private_schools = disapprove
+		law_no_schools = disapprove
+	}
+
+	lawgroup_health_system = {
+		law_state_hospitals = approve
+		law_worker_hospitals = approve
+		law_religious_hospitals = neutral
+		law_private_hospitals = disapprove
+		law_no_hospitals = disapprove
 	}
 }
 

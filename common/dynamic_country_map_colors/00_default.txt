@@ -556,11 +556,10 @@ hre_republic = {
 	possible = {
 		exists = c:HRE
 		THIS = c:HRE
-		OR = {
-			has_law = law_type:law_republic
-		}
-		NOT = {
+		has_law = law_type:law_republic
+		NOR = {
 			has_law = law_type:law_technocracy
+			has_law = law_type:law_workers_council
 		}
 		NOT = {
 			coa_fascist_trigger = yes
@@ -574,9 +573,7 @@ hre_technate = {
 	possible = {
 		exists = c:HRE
 		THIS = c:HRE
-		OR = {
-			has_law = law_type:law_republic
-		}
+		has_law = law_type:law_republic
 		has_law = law_type:law_technocracy
 	}
 }

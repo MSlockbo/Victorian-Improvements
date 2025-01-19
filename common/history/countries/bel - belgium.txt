@@ -18,6 +18,7 @@
 		activate_law = law_type:law_regulated_industry
 		activate_law = law_type:law_right_of_assembly
 		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_no_queer_protections
 		
 		set_tax_level = medium
 		

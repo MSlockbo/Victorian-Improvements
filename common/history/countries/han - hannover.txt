@@ -10,7 +10,7 @@
 		activate_law = law_type:law_religious_schools
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_mixed_ownership
-activate_law = law_type:law_regulated_industry
+		activate_law = law_type:law_regulated_industry
 		activate_law = law_type:law_right_of_assembly
 		activate_law = law_type:law_national_supremacy
 		

@@ -132,7 +132,7 @@ ideology_junker_paternalistic = {
 	}
 
 	lawgroup_legislative_body = {
-		law_autocracy = strongly_approve
+		law_autocracy = approve
 		law_oligarchy = approve
 		law_plutocracy = neutral
 		law_parliament = disapprove

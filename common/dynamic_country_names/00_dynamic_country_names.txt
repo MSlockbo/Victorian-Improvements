@@ -3155,7 +3155,7 @@ HRE = {
 		adjective = dyn_c_hre_communist_adj
 
 		is_main_tag_only = yes
-		priority = 10
+		priority = 20
 		
 		trigger = {
 			exists = scope:actor
