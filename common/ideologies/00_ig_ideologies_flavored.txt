@@ -3,7 +3,6 @@
 	
 	lawgroup_governance_principles = {
 		law_republic = approve
-		law_corporate_state = approve
 		law_theocracy = approve
 		law_monarchy = neutral
 		law_anarchy = strongly_disapprove
@@ -20,6 +19,7 @@
 		law_oligarchy = strongly_approve
 		law_autocracy = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_technocracy = strongly_disapprove
 		law_workers_council = strongly_disapprove
@@ -48,7 +48,6 @@ ideology_scholar_paternalistic = {
 		law_monarchy = strongly_approve
 		law_theocracy = neutral
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -63,6 +62,7 @@ ideology_scholar_paternalistic = {
 		law_autocracy = strongly_approve
 		law_oligarchy = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_workers_council = strongly_disapprove
 		law_technocracy = strongly_disapprove
@@ -120,7 +120,6 @@ ideology_junker_paternalistic = {
 		law_monarchy = strongly_approve
 		law_theocracy = neutral
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -135,6 +134,7 @@ ideology_junker_paternalistic = {
 		law_autocracy = approve
 		law_oligarchy = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_technocracy = strongly_disapprove
 		law_workers_council = strongly_disapprove
@@ -185,7 +185,6 @@ ideology_papal_paternalistic = {
 		law_monarchy = strongly_approve
 		law_theocracy = neutral
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -200,6 +199,7 @@ ideology_papal_paternalistic = {
 		law_autocracy = strongly_approve
 		law_oligarchy = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_technocracy = strongly_disapprove
 		law_workers_council = strongly_disapprove
@@ -250,7 +250,6 @@ ideology_papal_moralist = {
 		law_theocracy = strongly_approve
 		law_monarchy = approve
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -276,7 +275,6 @@ ideology_confucian = {
 		law_monarchy = strongly_approve
 		law_theocracy = neutral
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -337,7 +335,6 @@ ideology_bakufu = {
 
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
-		law_corporate_state = neutral
 		law_republic = neutral
 		law_theocracy = disapprove
 		law_anarchy = strongly_disapprove
@@ -354,6 +351,7 @@ ideology_bakufu = {
 		law_autocracy = strongly_approve
 		law_oligarchy = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_technocracy = strongly_disapprove
 		law_workers_council = strongly_disapprove
@@ -404,7 +402,6 @@ ideology_shinto_moralist = {
 		law_theocracy = strongly_approve
 		law_monarchy = approve
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -419,6 +416,7 @@ ideology_shinto_moralist = {
 		law_autocracy = strongly_approve
 		law_oligarchy = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_technocracy = strongly_disapprove
 		law_workers_council = strongly_disapprove
@@ -452,7 +450,6 @@ ideology_caudillismo = {
 	
 	lawgroup_governance_principles = {
 		law_republic = approve
-		law_corporate_state = approve
 		law_monarchy = neutral
 		law_theocracy = disapprove
 		law_anarchy = strongly_disapprove
@@ -467,6 +464,7 @@ ideology_caudillismo = {
 
 	lawgroup_legislative_body = {
 		law_autocracy = strongly_approve
+		law_corporate_council = approve
 		law_oligarchy = approve
 		law_plutocracy = neutral
 		law_parliament = strongly_disapprove
@@ -662,7 +660,6 @@ ideology_buddhist_moralist = {
 		law_theocracy = strongly_approve
 		law_monarchy = approve
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -696,7 +693,6 @@ ideology_hindu_moralist = {
 		law_monarchy = strongly_approve
 		law_theocracy = approve
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_anarchy = strongly_disapprove
 	}
 
@@ -743,7 +739,6 @@ ideology_hindu_moralist_british_india = {
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_theocracy = disapprove
 		law_anarchy = strongly_disapprove
 	}
@@ -908,7 +903,6 @@ ideology_heavenly_kingdom_theocratic = {
 		law_theocracy = strongly_approve
 		law_republic = disapprove
 		law_monarchy = disapprove
-		law_corporate_state = disapprove
 		law_anarchy = strongly_disapprove
 	}
 
@@ -996,8 +990,8 @@ ideology_agrarian_jeffersonian = {
 	}
 
 	lawgroup_industry = {
-		law_regulated_industry = approve
-		law_industry_banned = neutral
+		law_industry_banned = approve
+		law_regulated_industry = neutral
 		law_unregulated_industry = disapprove
 	}
 
@@ -1023,7 +1017,6 @@ ideology_constitutionalist = {
 	lawgroup_governance_principles = {
 		law_republic = approve
 		law_monarchy = approve
-		law_corporate_state = neutral
 		law_theocracy = neutral
 		law_anarchy = strongly_disapprove
 	}
@@ -1031,6 +1024,7 @@ ideology_constitutionalist = {
 	lawgroup_legislative_body = {
 		law_parliament = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_technocracy = neutral
 		law_oligarchy = disapprove
 		law_autocracy = disapprove
@@ -1071,6 +1065,12 @@ ideology_colonialist = {
 		law_homesteading = disapprove
 		law_state_agriculture = strongly_disapprove
 		law_collectivized_agriculture = strongly_disapprove
+	}
+
+	lawgroup_industry = {
+		law_industry_banned = approve
+		law_regulated_industry = neutral
+		law_unregulated_industry = disapprove
 	}
 
 	lawgroup_trade_policy = {
@@ -1248,7 +1248,6 @@ ideology_enclavist = {
 	lawgroup_governance_principles = {
 		law_republic = neutral
 		law_monarchy = neutral
-		law_corporate_state = neutral
 		law_theocracy = disapprove
 		law_anarchy = strongly_disapprove
 	}
@@ -1258,6 +1257,7 @@ ideology_enclavist = {
 		law_autocracy = strongly_approve
 		law_technocracy = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_workers_council = strongly_disapprove
 	}

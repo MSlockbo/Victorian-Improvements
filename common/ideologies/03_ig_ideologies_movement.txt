@@ -4,7 +4,7 @@ ideology_absolutist_movement = {
 
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
-		law_corporate_state = neutral
+		law_corporate_council = neutral
 		law_republic = disapprove
 		law_theocracy = disapprove
 		law_anarchy = strongly_disapprove
@@ -94,7 +94,7 @@ ideology_royalist_movement = {
 
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
-		law_corporate_state = neutral
+		law_corporate_council = neutral
 		law_theocracy = disapprove
 		law_republic = disapprove
 		law_anarchy = strongly_disapprove
@@ -107,7 +107,7 @@ ideology_communist_movement = {
 	lawgroup_governance_principles = {
 		law_republic = strongly_approve
 		law_anarchy = neutral
-		law_corporate_state = strongly_disapprove
+		law_corporate_council = strongly_disapprove
 		law_theocracy = strongly_disapprove
 		law_monarchy = strongly_disapprove
 	}
@@ -225,7 +225,7 @@ ideology_anarchist_movement = {
 	lawgroup_governance_principles = {
 		law_anarchy = strongly_approve
 		law_republic = neutral
-		law_corporate_state = strongly_disapprove
+		law_corporate_council = strongly_disapprove
 		law_theocracy = strongly_disapprove
 		law_monarchy = strongly_disapprove
 	}
@@ -308,6 +308,12 @@ ideology_anarchist_movement = {
 		law_hereditary_ownership = strongly_disapprove
 	}
 
+	lawgroup_industry = {
+		law_regulated_industry = approve
+		law_industry_banned = disapprove
+		law_unregulated_industry = strongly_disapprove
+	}
+
 	lawgroup_agriculture_model = {
 		law_collectivized_agriculture = strongly_approve
 		law_homesteading = neutral
@@ -354,7 +360,7 @@ ideology_vanguardist_movement = {
 
 	lawgroup_governance_principles = {
 		law_republic = strongly_approve
-		law_corporate_state = strongly_disapprove
+		law_corporate_council = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_theocracy = strongly_disapprove
 		law_monarchy = strongly_disapprove
@@ -512,7 +518,7 @@ ideology_radical_movement = {
 
 	lawgroup_governance_principles = {
 		law_republic = approve
-		law_corporate_state = neutral
+		law_corporate_council = neutral
 		law_theocracy = strongly_disapprove
 		law_monarchy = strongly_disapprove
 		law_anarchy = strongly_disapprove

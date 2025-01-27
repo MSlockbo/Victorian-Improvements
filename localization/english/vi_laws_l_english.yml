@@ -17,6 +17,7 @@
   lawgroup_legislative_body: "Legislative Body"
   law_plutocracy: "Plutocracy"
   law_parliament: "Parliament"
+  law_corporate_council: "Corporate Council"
   law_workers_council: "Worker's Council"
 
   lawgroup_political_parties: "Political Parties"
@@ -69,6 +70,7 @@
   law_workers_unions: "Workers Unions"
   law_state_unions: "State Unions"
 
+  law_no_taxation: "No Taxes"
   law_government_dividends: "Government Dividends"
   tax_government_dividends_add: "Government Dividends"
   modifier_vi_government_dividends: "Government Dividends"

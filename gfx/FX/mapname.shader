@@ -15,7 +15,7 @@ VertexShader =
 		[[
 			PDX_MAIN
 			{
-				VS_OUTPUT_MAPNAME Out = MapNameVertexShader( Input, _FlatmapHeight, _FlatmapLerp );
+				VS_OUTPUT_MAPNAME Out = MapNameVertexShader( Input, _FlatmapHeight, 0 );
 				return Out;
 			}
 		]]

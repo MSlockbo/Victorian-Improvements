@@ -1,0 +1,42 @@
+﻿
+MLY = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.5
+
+	ai_will_do = {
+		has_technology_researched = nationalism
+	}
+
+	possible = {
+		country_has_primary_culture = cu:malay
+		has_technology_researched = nationalism
+	}
+}
+
+SON = {
+	states = {
+		STATE_TIMBUKTU
+		STATE_EASTERN_MALI
+		STATE_WESTERN_MALI
+		STATE_GUINEA
+		STATE_SIERRA_LEONE
+		STATE_VOLTA
+		STATE_OUTER_HAUSALAND
+	}
+
+	ai_will_do = {
+		has_technology_researched = pan-nationalism
+	}
+
+	possible = {
+		OR = {
+			country_has_primary_culture = cu:songhai
+			country_has_primary_culture = cu:fulbe
+			country_has_primary_culture = cu:bambara
+			country_has_primary_culture = cu:mande
+			country_has_primary_culture = cu:hausa
+			country_has_primary_culture = cu:mossi
+		}
+	}
+}

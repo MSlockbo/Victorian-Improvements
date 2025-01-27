@@ -118,25 +118,6 @@ GER = {
 	}
 }
 
-RUS = {
-	dynamic_country_name = {
-		name = vi_dyn_c_russian_federation
-		adjective = RUS_ADJ
-
-		is_main_tag_only = yes
-		priority = 10
-
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				OR = {
-					has_law = law_type:law_republic
-				}
-			}
-		}
-	}
-}
-
 SIA = {
 	dynamic_country_name = {
 		name = vi_dyn_c_thailand
@@ -147,10 +128,26 @@ SIA = {
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
-				NAND = {
+				NOR = {
 					has_law = law_type:law_monarchy
-					has_law = law_type:law_autocracy
+					has_law = law_type:law_theocracy
 				}
+			}
+		}
+	}
+}
+
+RME = {
+	dynamic_country_name = {
+		name = vi_dyn_c_roman_empire
+		adjective = RME_ADJ
+
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
 			}
 		}
 	}

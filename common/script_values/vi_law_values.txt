@@ -14,6 +14,7 @@ vi_government_dividends_value = {
 			}
 		}
 	}
+	divide = 100
 	multiply = {
 		value = 1
 		subtract = modifier:country_government_dividends_waste_add

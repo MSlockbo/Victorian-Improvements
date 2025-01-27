@@ -221,7 +221,7 @@ achievement_folkhemmet = {
 		}
 	}
 	happened = {
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
         institution_investment_level = {
             institution = institution_social_security
             value = 5

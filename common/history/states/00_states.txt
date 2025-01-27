@@ -4024,7 +4024,7 @@ STATES = {
 		}
 		create_state = {
 			country = c:SIA
-			owned_provinces = { x8000B0 xA060D0 x47B039 x2160CF x9E6CEE xD070DF xC0362D x289F37 x5070E0 x31852E xC6D6FB x7F8C95 xFB4ADA xBE9208 x6D56E2 x173AAB x2231CD }
+			owned_provinces = { xA060D0 x47B039 x2160CF x9E6CEE xD070DF xC0362D x289F37 x5070E0 x31852E xC6D6FB x7F8C95 xFB4ADA xBE9208 x6D56E2 x173AAB x2231CD }
 			state_type = unincorporated
 		}		
 		
@@ -4109,6 +4109,7 @@ STATES = {
 		
 		add_homeland = cu:sumatran
 		add_homeland = cu:batak
+		add_homeland = cu:malay
 	}
 	s:STATE_SOUTH_SUMATRA = {
 		create_state = {
@@ -4134,6 +4135,7 @@ STATES = {
 		}
 		
 		add_homeland = cu:sumatran
+		add_homeland = cu:malay
 	}
 	s:STATE_WESTERN_NEW_GUINEA = {
 		create_state = {
@@ -4204,6 +4206,7 @@ STATES = {
 		
 		add_homeland = cu:bornean
 		add_homeland = cu:dayak
+		add_homeland = cu:malay
 	}	
 	s:STATE_EAST_BORNEO = {
 		create_state = {
@@ -4257,7 +4260,7 @@ STATES = {
 		}
 		create_state = {
 			country = c:SIA
-			owned_provinces = { xF9F87A x80C0B0 xCAB9F2 }
+			owned_provinces = { x8000B0 xF9F87A x80C0B0 xCAB9F2 }
 		}
 		create_state = {
 			country = c:BIC
@@ -4294,7 +4297,8 @@ STATES = {
 		}
 		
 		add_homeland = cu:bornean
-		add_homeland = cu:dayak		
+		add_homeland = cu:dayak	
+		add_homeland = cu:malay	
 	}
 	s:STATE_MINDANAO = {
 		create_state = {
@@ -4622,7 +4626,11 @@ STATES = {
 	s:STATE_KENYA = {
 		create_state = {
 			country = c:KKY
-			owned_provinces = { xECA4C0 x089446 x65632F x63DAA0 x405F8E xC2118A x9AE44A xD775AC xFE3DAB x2F7464 xB0DB1C x4E4C18 x03C8B4 xA2D8EF x46B3F6 x356777 x90F646 x58526D xF89944 x8FF25F xBD067F xA7A757 x9BA0B4 x95C403 xE007A1 xE5F986 xA0A011 x0AF9FB xC95AAB x4168F3 x834AD2 xB5BCCC x08B945 xA0A090 x40DE9B x5EA4B6 xA40CF9 x89BA83 x8079E2 xC80CAC xB97349 x6C071A xBFCF3E xADF3C8 x9A78B7 x30D3AC xD0A631 x005C29 x4816E8 xF59538 x47F824 x996D62 x9FDE2D x88F1D5 xC8B790 x77319E x33566A x5CB34D xFE3967 xD8A2A3 x6CCF4B x19CFEC x28843B xA02190 x5C1ADA x6B52F1 }
+			owned_provinces = { xECA4C0 x089446 x65632F x63DAA0 x405F8E xC2118A x9AE44A xD775AC xFE3DAB x2F7464 xB0DB1C x4E4C18 x03C8B4 xA2D8EF x46B3F6 x356777 x90F646 x58526D xF89944 x8FF25F xBD067F xA7A757 x9BA0B4 x95C403 xE007A1 xE5F986 xA0A011 x0AF9FB xC95AAB x4168F3 x834AD2 xB5BCCC x08B945 xA0A090 x40DE9B x5EA4B6 xA40CF9 x89BA83 x8079E2 xC80CAC xB97349 x6C071A xBFCF3E xADF3C8 x9A78B7 x30D3AC xD0A631 x005C29 x4816E8 xF59538 x47F824 x996D62 x9FDE2D x88F1D5 xC8B790 x77319E x33566A x5CB34D xFE3967 xD8A2A3 x6CCF4B x19CFEC x28843B }
+		}
+		create_state = {
+			country = c:OMA
+			owned_provinces = { x5C1ADA x6B52F1 xA02190 }
 		}
 		
 		add_homeland = cu:somali

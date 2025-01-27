@@ -1560,7 +1560,7 @@ BRZ = { # Brazil
 		priority = 20
 		trigger = {
 			scope:actor ?= {
-				has_law = law_type:law_republic
+				coa_republic_trigger = yes
 				has_law = law_type:law_landed_voting
 				OR = {
 					has_law = law_type:law_tenant_farmers
@@ -8192,14 +8192,14 @@ RUS = { # Russia
 			coa_def_republic_flag_trigger = yes
 		}
 	}		
-	flag_definition = {
-		coa = RUS_dictatorship
-		subject_canton = RUS_dictatorship
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}	
+	#flag_definition = {
+	#	coa = RUS_dictatorship
+	#	subject_canton = RUS_dictatorship
+	#	priority = 20
+	#	trigger = {
+	#		coa_def_dictatorship_flag_trigger = yes
+	#	}
+	#}	
 	flag_definition = {
 		coa = RUS_oligarchy
 		subject_canton = RUS_oligarchy

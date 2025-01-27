@@ -1143,7 +1143,7 @@ formation.18 = {
 				trigger = {
 					OR = {
 						has_law = law_type:law_republic
-						has_law = law_type:law_corporate_state
+						has_law = law_type:law_corporate_council
 					}
 				}
 				desc = formation.18.d_4
@@ -1177,7 +1177,7 @@ formation.18 = {
 				trigger = {
 					OR = {
 						has_law = law_type:law_republic
-						has_law = law_type:law_corporate_state
+						has_law = law_type:law_corporate_council
 					}
 				}
 				desc = formation.18.f_4

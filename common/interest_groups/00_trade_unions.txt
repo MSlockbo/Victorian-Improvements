@@ -220,7 +220,7 @@
 		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
-			add = 1
+			add = 0.5
 		}
 
 		if = {

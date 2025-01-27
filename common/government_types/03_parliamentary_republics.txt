@@ -7,11 +7,7 @@ gov_french_2nd_republic_parliamentary = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
+		coa_parliamentary_republic_trigger = yes
 		country_has_primary_culture = cu:french
 		has_variable = fra_republic_counter
 		var:fra_republic_counter ?= 2
@@ -32,11 +28,7 @@ gov_french_2nd_republic_parliamentary_dictator = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
+		coa_parliamentary_republic_trigger = yes
 		has_law = law_type:law_no_elections
 		country_has_primary_culture = cu:french
 		country_has_voting_franchise = no
@@ -60,11 +52,7 @@ gov_french_3rd_republic_parliamentary = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
+		coa_parliamentary_republic_trigger = yes
 		country_has_primary_culture = cu:french
 		has_variable = fra_republic_counter
 		var:fra_republic_counter ?= 3
@@ -85,14 +73,9 @@ gov_french_3rd_republic_parliamentary_dictator = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
-		has_law = law_type:law_no_elections
-		country_has_primary_culture = cu:french
+		coa_parliamentary_republic_trigger = yes
 		country_has_voting_franchise = no
+		country_has_primary_culture = cu:french
 		has_variable = fra_republic_counter
 		var:fra_republic_counter ?= 3
 	}
@@ -113,11 +96,7 @@ gov_french_4th_republic_parliamentary = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
+		coa_parliamentary_republic_trigger = yes
 		country_has_primary_culture = cu:french
 		has_variable = fra_republic_counter
 		var:fra_republic_counter ?= 4
@@ -138,14 +117,9 @@ gov_french_4th_republic_parliamentary_dictator = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
-		has_law = law_type:law_no_elections
-		country_has_primary_culture = cu:french
+		coa_parliamentary_republic_trigger = yes
 		country_has_voting_franchise = no
+		country_has_primary_culture = cu:french
 		has_variable = fra_republic_counter
 		var:fra_republic_counter ?= 4
 	}
@@ -166,11 +140,7 @@ gov_dominion_india_parliamentary = {
 	female_ruler = "RULER_TITLE_PRIME_MINISTER"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
+		coa_parliamentary_republic_trigger = yes
 		country_has_voting_franchise = yes
 		OR = {
 			AND = {
@@ -200,14 +170,9 @@ gov_technate_parliamentary = {
 	female_ruler = "RULER_TITLE_CHIEF_ENGINEER"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
-		has_law = law_type:law_no_elections
-		has_law = law_type:law_technocracy
-		has_law = law_type:law_meritocratic_bureaucrats
+		coa_parliamentary_republic_trigger = yes
+		coa_technocracy_trigger = yes
+		country_has_voting_franchise = no
 	}
 
 	on_government_type_change = {
@@ -229,11 +194,7 @@ gov_circassian_federation = {
 	
 	possible = {
 		is_country_type = unrecognized
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
+		coa_parliamentary_republic_trigger = yes
 		country_has_voting_franchise = no
 		exists = c:CIR
 		c:CIR = ROOT
@@ -254,12 +215,8 @@ gov_parliamentary_dictatorship = {
 	female_ruler = "RULER_TITLE_LADY_PROTECTOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
-		has_law = law_type:law_no_elections
+		coa_parliamentary_republic_trigger = yes
+		country_has_voting_franchise = no
 	}
 
 	on_government_type_change = {
@@ -277,12 +234,7 @@ gov_parliamentary_oligarchy = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
-		has_law = law_type:law_no_elections
+		coa_parliamentary_republic_trigger = yes
 		country_has_voting_franchise = no
 	}
 
@@ -302,11 +254,7 @@ gov_parliamentary_single_party_state = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
+		coa_parliamentary_republic_trigger = yes
 		has_law = law_type:law_single_party_state
 	}
 
@@ -326,11 +274,7 @@ gov_parliamentary_democracy = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_republic
-		OR = {
-			has_law = law_type:law_pm_head_of_state
-			has_law = law_type:law_shared_head_of_state
-		}
+		coa_parliamentary_republic_trigger = yes
 		country_has_voting_franchise = yes
 		NOT = { 
 			has_law = law_type:law_single_party_state

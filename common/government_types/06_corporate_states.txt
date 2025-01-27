@@ -6,7 +6,7 @@ gov_volksgemeinschaft = {
 	female_ruler = "RULER_TITLE_FUHRERIN"
 	
 	possible = {
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
 		has_law = law_type:law_ethnostate
 		OR = {
 			has_law = law_type:law_autocracy 
@@ -40,7 +40,7 @@ gov_folkhemmet = {
 	female_ruler = "RULER_TITLE_STATSMINISTER"
 	
 	possible = {
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
 		country_has_voting_franchise = yes
 		NOT = { 
 			has_law = law_type:law_single_party_state
@@ -63,7 +63,7 @@ gov_falangist_state = {
 	female_ruler = "RULER_TITLE_JEFA"
 	
 	possible = {
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
 		OR = {
 			has_law = law_type:law_autocracy 
 			has_law = law_type:law_oligarchy
@@ -95,7 +95,7 @@ gov_fascist_corporate_state = {
 	female_ruler = "RULER_TITLE_PRESIDENT"
 	
 	possible = {
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
 		OR = {
 			has_law = law_type:law_autocracy 
 			has_law = law_type:law_oligarchy
@@ -124,7 +124,7 @@ gov_corporate_state = {
 	female_ruler = "RULER_TITLE_PRESIDENT"
 	
 	possible = {
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
 		country_has_voting_franchise = yes
 		NOT = { 
 			has_law = law_type:law_single_party_state
@@ -146,7 +146,7 @@ gov_technate_corporate = {
 	female_ruler = "RULER_TITLE_CHIEF_EXECUTIVE"
 	
 	possible = {
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
 		has_law = law_type:law_technocracy
 	}
 

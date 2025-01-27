@@ -64,3 +64,38 @@ MOC = {
 	cultures = { occitan }
 	capital = STATE_PROVENCE
 }
+
+RME = {
+	color = { 177 60 59 }
+
+	country_type = recognized
+
+	tier = hegemony
+
+	cultures = { greek north_italian south_italian }
+	capital = STATE_LAZIO
+}
+
+MLY = {
+	color = { 158 97 204 }
+
+	country_type = unrecognized
+
+	tier = kingdom
+
+	cultures = { malay }
+
+	capital = STATE_MALAYA
+}
+
+SON = {
+	color = { 147 242 130 }
+
+	country_type = unrecognized
+
+	tier = empire
+
+	cultures = { songhai bambara mossi hausa fulbe mande }
+
+	capital = STATE_TIMBUKTU
+}

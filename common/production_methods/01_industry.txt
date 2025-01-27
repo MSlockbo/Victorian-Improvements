@@ -1864,7 +1864,7 @@ pm_electric_automobile_production = {
 	texture = "gfx/interface/icons/production_method_icons/automobiles.dds"
 	
 	unlocking_technologies = { 
-		electric_railways
+		electric_railway
 	}
 	
 	building_modifiers = {
@@ -1884,6 +1884,8 @@ pm_electric_automobile_production = {
 			building_employment_engineers_add = 500
 		}
 	}
+
+	required_input_goods = electricity
 }
 
 pm_watertube_boiler_building_motor_industry = {

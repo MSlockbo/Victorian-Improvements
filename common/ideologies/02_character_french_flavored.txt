@@ -6,7 +6,6 @@
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_theocracy = disapprove
 		law_anarchy = strongly_disapprove
 	}
@@ -14,6 +13,7 @@
 	lawgroup_legislative_body = {
 		law_plutocracy = neutral
 		law_oligarchy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_autocracy = disapprove
 		law_technocracy = strongly_disapprove
@@ -201,7 +201,6 @@ ideology_legitimist = {
 
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
-		law_corporate_state = neutral
 		law_republic = disapprove
 		law_theocracy = disapprove
 		law_anarchy = strongly_disapprove
@@ -209,7 +208,8 @@ ideology_legitimist = {
 
 	lawgroup_legislative_body = {
 		law_autocracy = strongly_approve
-		law_oligarchy = neutral
+		law_oligarchy = approve
+		law_corporate_council = neutral
 		law_plutocracy = disapprove
 		law_parliament = strongly_disapprove
 		law_technocracy = strongly_disapprove
@@ -366,7 +366,6 @@ ideology_bonapartist = {
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
 		law_republic = neutral
-		law_corporate_state = neutral
 		law_theocracy = disapprove
 		law_anarchy = strongly_disapprove
 	}
@@ -382,6 +381,7 @@ ideology_bonapartist = {
 		law_autocracy = strongly_approve
 		law_oligarchy = approve
 		law_plutocracy = neutral
+		law_corporate_council = neutral
 		law_parliament = disapprove
 		law_technocracy = strongly_disapprove
 		law_workers_council = strongly_disapprove

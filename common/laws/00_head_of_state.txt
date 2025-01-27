@@ -12,6 +12,7 @@ law_ruler_head_of_state = {
 
 	disallowing_laws = {
 		law_republic
+		law_corporate_council
 	}
 
 	can_enact = {
@@ -89,6 +90,7 @@ law_president_head_of_state = {
 
 	unlocking_laws = {
 		law_republic
+		law_corporate_council
 	}
 
 	can_enact = {

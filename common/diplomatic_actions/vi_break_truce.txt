@@ -1,5 +1,7 @@
 ﻿
 break_truce = {
+	groups = { general }
+
 	requires_approval = no
 	should_notify_third_parties = yes
 	show_confirmation_box = yes
@@ -15,10 +17,7 @@ break_truce = {
 	}
 
 	accept_effect = {
-		end_truce = {
-			country = scope:target_country
-			months = 0
-		}
+		end_truce = scope:target_country
 
 		create_incident = {
 			country = scope:target_country

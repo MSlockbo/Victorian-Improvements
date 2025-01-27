@@ -35,7 +35,20 @@ coa_undemocratic_monarchy_trigger = {
 coa_republic_trigger = {
 	OR = {
 		has_law = law_type:law_republic
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
+	}
+}
+
+coa_parliamentary_republic_trigger = {
+	coa_republic_trigger = yes
+	has_law = law_type:law_pm_head_of_state
+}
+
+coa_presidential_republic_trigger = {
+	coa_republic_trigger = yes
+	OR = {
+		has_law = law_type:law_president_head_of_state
+		has_law = law_type:law_shared_head_of_state
 	}
 }
 
@@ -54,6 +67,12 @@ coa_plutocracy_trigger = {
 	has_law = law_type:law_plutocracy
 }
 
+coa_technocracy_trigger = {
+	coa_republic_trigger = yes
+	has_law = law_type:law_technocracy
+	has_law = law_type:law_meritocratic_bureaucrats
+}
+
 coa_theocracy_trigger = {
 	has_law = law_type:law_theocracy
 }
@@ -63,11 +82,8 @@ coa_multicultural_trigger = {
 }
 
 coa_autocracy_trigger = {
-	OR = {
-		has_law = law_type:law_autocracy
-		has_law = law_type:law_single_party_state
-		has_law = law_type:law_no_elections
-	}
+	has_law = law_type:law_autocracy
+	has_law = law_type:law_no_elections
 }
 
 coa_anarchy_trigger = {
@@ -119,7 +135,7 @@ coa_fascist_trigger = {
 		coa_plutocracy_trigger = yes
 	}
 	OR = {
-		has_law = law_type:law_corporate_state
+		has_law = law_type:law_corporate_council
 		ruler ?= {
 			OR = {
 				has_ideology = ideology:ideology_fascist

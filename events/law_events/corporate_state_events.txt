@@ -24,7 +24,7 @@ corporate_state.1 = {
 	cooldown = { months = normal_modifier_time }
 	
 	trigger = {
-		is_enacting_law = law_type:law_corporate_state
+		is_enacting_law = law_type:law_corporate_council
 		ig:ig_trade_unions = {
 			leader = {
 				NOR = {
@@ -68,7 +68,7 @@ corporate_state.1 = {
 	}
 
 	cancellation_trigger = {
-		NOT = { is_enacting_law = law_type:law_corporate_state }
+		NOT = { is_enacting_law = law_type:law_corporate_council }
 	}
 
 	option = {
@@ -142,7 +142,7 @@ corporate_state.2 = {
 	cooldown = { months = normal_modifier_time }
 	
 	trigger = {
-		is_enacting_law = law_type:law_corporate_state
+		is_enacting_law = law_type:law_corporate_council
 		has_technology_researched = central_planning
 		NOT = {
 			has_law = law_type:law_command_economy
@@ -162,7 +162,7 @@ corporate_state.2 = {
 	}
 
 	cancellation_trigger = {
-		NOT = { is_enacting_law = law_type:law_corporate_state }
+		NOT = { is_enacting_law = law_type:law_corporate_council }
 	}
 
 	option = {
@@ -266,7 +266,7 @@ corporate_state.3 = {
 	cooldown = { months = normal_modifier_time }
 	
 	trigger = {
-		is_enacting_law = law_type:law_corporate_state
+		is_enacting_law = law_type:law_corporate_council
 		any_scope_state = {
 			is_incorporated = yes
 			any_scope_pop = {
@@ -318,7 +318,7 @@ corporate_state.3 = {
 	}
 
 	cancellation_trigger = {
-		NOT = { is_enacting_law = law_type:law_corporate_state }
+		NOT = { is_enacting_law = law_type:law_corporate_council }
 	}
 
 	option = {
@@ -384,7 +384,7 @@ corporate_state.4 = {
 	cooldown = { months = normal_modifier_time }
 	
 	trigger = {
-		is_enacting_law = law_type:law_corporate_state
+		is_enacting_law = law_type:law_corporate_council
 		NOT = {
 			has_law = law_type:law_multicultural
 		}
@@ -400,7 +400,7 @@ corporate_state.4 = {
 	}
 
 	cancellation_trigger = {
-		NOT = { is_enacting_law = law_type:law_corporate_state }
+		NOT = { is_enacting_law = law_type:law_corporate_council }
 	}
 
 	option = {
@@ -451,7 +451,7 @@ corporate_state.5 = {
 	cooldown = { months = normal_modifier_time }
 	
 	trigger = {
-		is_enacting_law = law_type:law_corporate_state
+		is_enacting_law = law_type:law_corporate_council
 		any_scope_building = {
 			is_building_type = building_university
 		}
@@ -473,7 +473,7 @@ corporate_state.5 = {
 	}
 
 	cancellation_trigger = {
-		NOT = { is_enacting_law = law_type:law_corporate_state }
+		NOT = { is_enacting_law = law_type:law_corporate_council }
 	}
 
 	option = {
@@ -587,7 +587,7 @@ corporate_state.6 = {
 	cooldown = { months = normal_modifier_time }
 	
 	trigger = {
-		is_enacting_law = law_type:law_corporate_state
+		is_enacting_law = law_type:law_corporate_council
 		any_interest_group = {
 			OR = {
 				is_interest_group_type = ig_industrialists
@@ -618,7 +618,7 @@ corporate_state.6 = {
 	}
 
 	cancellation_trigger = {
-		NOT = { is_enacting_law = law_type:law_corporate_state }
+		NOT = { is_enacting_law = law_type:law_corporate_council }
 	}
 
 	option = {

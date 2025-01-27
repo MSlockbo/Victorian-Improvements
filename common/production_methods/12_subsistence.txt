@@ -51,6 +51,10 @@ pm_serfdom_no = {
 		law_tenant_farmers
 		law_free_peasantry
 	}
+
+	disallowing_laws = {
+		law_homesteading
+	}
 	
 	building_modifiers = {					
 		unscaled = {

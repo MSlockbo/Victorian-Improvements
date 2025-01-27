@@ -1,0 +1,8 @@
+﻿
+COU = { # Florida
+	flag_definition = {
+		coa = COU
+		subject_canton = COU
+		priority = 1
+	}
+}

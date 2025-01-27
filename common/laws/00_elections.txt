@@ -13,6 +13,10 @@ law_no_elections = {
 		country_legitimacy_govt_total_clout_add = 150
 		country_legitimacy_ideological_incoherence_mult = 0.3
 	}
+
+	on_activate = {
+		set_next_election_date = 9999.01.01
+	}
 	
 	can_enact = { 
 		trigger_if = {

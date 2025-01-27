@@ -1,0 +1,165 @@
+﻿
+war_intervention = {
+	groups = { general }
+
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_confirmation_box = yes
+
+	potential = {
+		# Is at war
+		scope:target_country = {
+			is_at_war = yes
+			any_scope_war = {
+				is_warleader = prev
+			}
+		}
+	}
+
+	possible = {
+
+		# We have sufficient relations
+		scope:target_country.relations:root > relations_threshold:cordial
+
+		# We are not any enemy of theirs in another war
+		NOT = { has_war_with = root }
+
+		# Does our government allow us to join a war
+		OR = {
+			# We can make aggressive diplomatic plays
+			aggressive_diplomatic_plays_permitted = yes
+			
+			# Is in a defensive war
+			scope:target_country = {
+				any_scope_war = {
+					defender_warleader = {
+						OR = {
+							this = scope:target_country
+							is_in_war_together = scope:target_country
+						}
+					}
+				}
+			}
+		}
+
+		# Can we join any of the target's wars
+		scope:target_country = {
+
+			any_scope_war = {
+				save_temporary_scope_as = current_war_scope
+
+				# No war participant is
+				NOT = { any_war_participant = {
+					count = all
+					
+					OR = {
+						AND = {
+							# An enemy and
+							has_war_with = scope:target_country
+	
+							OR = {
+								# We are their subject or
+								root = { is_subject_of = prev } 
+
+								# We are allied in another war
+								is_in_war_together = root
+							}
+						}
+						AND = {
+							# Is an ally and
+							is_in_war_together = scope:target_country
+
+							# We are enemies in another war
+							NOT = { has_war_with = root }
+						}
+					}
+				} }
+			}
+		}
+	}
+
+	accept_effect = {
+		scope:target_country = {
+			every_scope_war = {
+				limit = {
+
+					# Does our government allow us to join this war
+					OR = {
+						# We can make aggressive diplomatic plays
+						root = { aggressive_diplomatic_plays_permitted = yes }
+						
+						# This is a defensive war
+						defender_warleader = {
+							OR = {
+								this = scope:target_country
+								is_in_war_together = scope:target_country
+							}
+						}
+					}
+					
+
+					# No war participant is
+					NOT = { any_war_participant = {
+						count = all
+						
+						OR = {
+							AND = {
+								# An enemy and
+								has_war_with = scope:target_country
+		
+								OR = {
+									# We are their subject or
+									root = { is_subject_of = prev } 
+	
+									# We are allied in another war
+									is_in_war_together = root
+								}
+							}
+							AND = {
+								# Is an ally and
+								is_in_war_together = scope:target_country
+	
+								# We are enemies in another war
+								NOT = { has_war_with = root }
+							}
+						}
+					} }
+				}
+
+				# Join this war
+				join_war = {
+					target = root
+					side = scope:target_country
+				}
+			}
+		}
+	}
+
+	ai = {
+		propose_score = {
+			value = 100
+		}
+
+		will_propose = {
+			scope:target_country = {
+				is_at_war = yes
+			}
+
+			AND = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = protective
+				}
+
+				infamy < infamy_threshold:infamous
+
+				scope:target_country = {
+					OR = {
+						country_rank <= rank_value:unrecognized_major_power
+						infamy > infamy_threshold:pariah
+					}
+				}
+			}
+		}
+	}
+}

@@ -1308,7 +1308,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 									has_ideology = ideology:ideology_corporatist_leader
 								}
 							}
-							has_law = law_type:law_corporate_state
+							has_law = law_type:law_corporate_council
 						}
 					}
 				}
